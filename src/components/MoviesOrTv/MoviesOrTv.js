@@ -13,7 +13,7 @@ const MoviesOrTv = () => {
     const POSTER = 'https://image.tmdb.org/t/p/original';
     const MOVIE_BACKDROP = 'https://image.tmdb.org/t/p/w1280';
     const profil = 'http://image.tmdb.org/t/p/w300';
-
+    REACT_APP_API_KEY = d2f90b385fa2430163392784263021de
     //MULTI SEARCH
     const MULTISEARCH_URL = `https://api.themoviedb.org/3/search/multi?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query=brad pitt&page=1&include_adult=false;`
     //MOVIE URLS
