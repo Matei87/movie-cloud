@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useContext } from 'react';
+import MovieState from './context/MovieState';
+import MoviesPopular from './components/MoviesPopular/MoviesPopular';
+import MoviesOrTv from './components/MoviesOrTv/MoviesOrTv';
+import ShowMovieOrTv from './components/ShowMovieOrTv/ShowMovieOrTv';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 import './App.css';
 
-function App() {
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+import 'jquery/dist/jquery.min.js'
+
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MovieState>
+      <Navbar />
+      <MoviesPopular />
+      <MoviesOrTv />
+      <ShowMovieOrTv />
+      <Footer />
+    </MovieState>
   );
 }
 

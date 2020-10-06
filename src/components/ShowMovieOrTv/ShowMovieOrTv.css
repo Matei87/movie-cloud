@@ -1,0 +1,5 @@
+.content {
+    grid-row: 3 / 4;
+    grid-column: center;
+    padding-bottom: 10rem;
+}
