@@ -1,76 +1,139 @@
-import React, { useEffect, useReducer, useState } from 'react';
+import React, { useState } from 'react';
 import MovieContext from './MovieContext';
-import MovieReducer from './MovieReducer';
 
 
 //state of the cotext
 const MovieState = (props) => {
     const initialstate = {
         multiSearch: [],
+        //all: [],
 
+        //movies
         moviesPopular: [],
         moviesTopRated: [],
         moviesNowPlaying: [],
         moviesUpcoming: [],
-        moviesTrendingWeek: [],
-        moviesTrendingDay: [],
-        // moviesGenre: [],
-        // movieDetails: {},
-        //movieCredits: [],
-        // movieTrailers: [],
-        // movieReviews: [],
 
+        //tv
         tvAiringToday: [],
         tvPopular: [],
         tvOnTheAir: [],
         tvTopRated: [],
-        tvTrendingWeek: [],
-        tvTrendingDay: [],
 
-        errorMessage: null,
-        type: ''
+        //isLoading
+        loading: false,
+
+        type: localStorage.getItem('type') || ''
     }
     const [data, setData] = useState(initialstate);
 
-    console.log(data)
+
+    //MOVIE URLS
+    const MOVIE_URL_UPCOMING = `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
+    const MOVIE_URL_NOWPLAYING = `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
+    const MOVIE_URL_POPULAR = `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
+    const MOVIE_URL_TOPRATED = `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
+
+    //TV URLS
+    const TV_URL_AIRINGTODAY = `https://api.themoviedb.org/3/tv/airing_today?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
+    const TV_URL_POPULAR = `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
+    const TV_URL_ONTHEAIR = `https://api.themoviedb.org/3/tv/on_the_air?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
+    const TV_URL_TOPRATED = `https://api.themoviedb.org/3/tv/top_rated?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
+
+
+    //SEARCH ***
+    const handleSearch = async (query) => {
+        try {
+            const MULTISEARCH_URL = `https://api.themoviedb.org/3/search/multi?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query=${query}&page=1&include_adult=false`;
+            const request = await fetch(MULTISEARCH_URL);
+            const response = await request.json();
+            //console.log(response)
+            setData({ multiSearch: response.results });
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    //MOVIES ***
+    const handleMovies = async () => {
+        try {
+            const request = [
+                fetch(MOVIE_URL_UPCOMING),
+                fetch(MOVIE_URL_NOWPLAYING),
+                fetch(MOVIE_URL_POPULAR),
+                fetch(MOVIE_URL_TOPRATED),
+            ];
+            const response = await Promise.all(request);
+            const data = await Promise.all(response.map(res => res.json()));
+            //console.log(data);
+            setData({
+                moviesUpcoming: data[0].results, moviesNowPlaying: data[1].results, moviesPopular: data[2].results,
+                moviesTopRated: data[3].results, type: localStorage.setItem('type', 'movie') || 'movie', loading: true
+            });
+        } catch (error) {
+            console.log(error);
+        }
+
+    }
+
+    //TV ***
+    const handleTV = async () => {
+        try {
+            const request = [
+                fetch(TV_URL_AIRINGTODAY),
+                fetch(TV_URL_POPULAR),
+                fetch(TV_URL_ONTHEAIR),
+                fetch(TV_URL_TOPRATED),
+
+            ];
+            const response = await Promise.all(request);
+            const data = await Promise.all(response.map(res => res.json()));
+            //console.log(data);
+            setData({
+                tvAiringToday: data[0].results, tvPopular: data[1].results, tvOnTheAir: data[2].results,
+                tvTopRated: data[3].results, type: localStorage.setItem('type', 'tv') || 'tv', loading: true
+            });
+        } catch (error) {
+            console.log(error)
+        }
+
+    }
+
+    //console.log(data.tvTrendingDay)
     return (
         <MovieContext.Provider
-            value={[data, setData]}
-        // value={
-        //     {
-        //         multiSearch: data.multiSearch,
+            value={
+                {
+                    multiSearch: data.multiSearch,
+                    //all: data.all,
 
-        //         moviesPopular: data.moviesPopular,
-        //         moviesTopRated: data.moviesTopRated,
-        //         moviesNowPlaying: data.moviesNowPlaying,
-        //         moviesUpcoming: data.moviesUpcoming,
-        //         moviesTrendingWeek: data.moviesTrendingWeek,
-        //         moviesTrendingDay: data.moviesTrendingDay,
 
-        //         tvAiringToday: data.tvAiringToday,
-        //         tvPopular: data.tvPopular,
-        //         tvOnTheAir: data.tvOnTheAir,
-        //         tvTopRated: data.tvTopRated,
-        //         tvTrendingWeek: data.tvTrendingWeek,
-        //         tvTrendingDay: data.tvTrendingDay,
+                    //movies
+                    moviesPopular: data.moviesPopular,
+                    moviesTopRated: data.moviesTopRated,
+                    moviesNowPlaying: data.moviesNowPlaying,
+                    moviesUpcoming: data.moviesUpcoming,
 
-        //         type: data.type,
-        //         data: data,
-        //         setData: data.setData,
-        //         errorMessage: data.errorMessage,
 
-        //         // fetchMoviesPopular,
-        //         // fetchMoviesTopRated,
-        //         // fetchMoviesNowPlaying,
-        //         // fetchMoviesUpcoming,
+                    //tv
+                    tvAiringToday: data.tvAiringToday,
+                    tvPopular: data.tvPopular,
+                    tvOnTheAir: data.tvOnTheAir,
+                    tvTopRated: data.tvTopRated,
 
-        //         // fetchTvAiringToday,
-        //         // fetchTvPopular,
-        //         // fetchTvOnTheAir,
-        //         // fetchTvTopRated,
-        //         //movies1
-        //     }
-        // }
+
+                    type: data.type,
+
+                    loading: data.loading,
+
+                    handleMovies,
+                    handleTV,
+                    handleSearch,
+                    data,
+                    setData,
+
+                }
+            }
         >
             {props.children}
         </MovieContext.Provider>
