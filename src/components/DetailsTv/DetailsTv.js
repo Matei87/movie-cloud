@@ -186,7 +186,7 @@ const DetailsTv = (props) => {
                             {first_air_date_tv ? <>{(first_air_date_tv).split('-').reverse().join('/')} | </> : null}
                             {episode_run_time_tv.length > 0 ? <>{`${(episode_run_time_tv).slice(0, 1)} mins | `}</> : null}
                             {original_language_tv ? <>{`${(original_language_tv).toUpperCase()} | `}</> : null}
-                            {vote_average_tv ? vote_average_tv : null} {vote_count_tv ? (vote_count_tv) : null}
+                            {vote_average_tv ? vote_average_tv : null} {vote_count_tv ? <>{`(${vote_count_tv})`}</> : null}
                         </span>
                         {/* {(release_date_movie).slice(8, 10) && (first_air_date_tv).slice(8, 10)}/{(release_date_movie).slice(5, 7) && (first_air_date_tv).slice(5, 7)}/{(release_date_movie).slice(0, 4) && (first_air_date_tv).slice(0, 4)} */}
                     </div>

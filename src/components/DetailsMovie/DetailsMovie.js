@@ -187,7 +187,7 @@ const DetailsMovie = (props) => {
                             {release_date_movie ? <>{(release_date_movie).split('-').reverse().join('/')} | </> : null}
                             {runtime_movie ? <>{runtime_movie} mins | </> : null}
                             {original_language_movie ? <>{(original_language_movie).toUpperCase()} | </> : null}
-                            {vote_average_movie ? vote_average_movie : null} {vote_count_movie ? (vote_count_movie) : null}
+                            {vote_average_movie ? vote_average_movie : null} {vote_count_movie ? <>{`(${vote_count_movie})`}</> : null}
                         </span>
                         <span className="details-header-details-tagline">{tagline || ''}</span>
                     </div>
