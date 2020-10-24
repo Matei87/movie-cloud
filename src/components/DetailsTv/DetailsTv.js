@@ -13,7 +13,7 @@ const PICTURE = 'https://image.tmdb.org/t/p/w300';
 const YOUTUBE = 'https://www.youtube.com/embed/';
 
 const DetailsTv = (props) => {
-    const { id } = props.location.state;
+    const { id } = props.match.params;
     const [detailsTv, setDetailsTv] = useState({
         //tv
         backdrop_path_tv: '',
@@ -41,7 +41,9 @@ const DetailsTv = (props) => {
         loading: false
 
     });
-
+    useEffect(() => {
+        fetchDetailsTv();
+    }, []);
 
     const fetchDetailsTv = async () => {
         const urlTvReviews = `https://api.themoviedb.org/3/tv/${id}/reviews?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
@@ -66,10 +68,6 @@ const DetailsTv = (props) => {
             reviews: data[3].results, loading: true
         });
     };
-
-    useEffect(() => {
-        fetchDetailsTv();
-    }, []);
 
     const { backdrop_path_tv, genres_tv, title_tv, vote_average_tv, vote_count_tv, original_language_tv,
         episode_run_time_tv, first_air_date_tv, overview_tv, poster_path_tv, taglineTV, cast, trailers, reviews, loading } = detailsTv;

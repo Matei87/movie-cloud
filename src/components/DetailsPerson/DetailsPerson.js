@@ -36,7 +36,7 @@ const DetailsPerson = (props) => {
 
     });
 
-    const { id } = props.location.state;
+    const { id } = props.match.params;
     const fetchPersonDetails = async () => {
 
         const urlPersonDetails = `https://api.themoviedb.org/3/person/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`;

@@ -1,21 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import './DiscoverItems.css';
 
-
+import Loader from '../Loader/Loader';
 import { IoIosStar } from "react-icons/io";
 import { HiClock } from "react-icons/hi";
 import { Link } from 'react-router-dom';
 import defaultmovie from '../../pictures/defaultmovie.png';
 
 const DiscoverMovieTopRated = () => {
-    const [moviesTopRated, setMoviesTopRated] = useState([]);
+    const [data, setData] = useState({
+        moviesTopRated: [],
+        loading: false
+    });
 
     const handleMovies = async () => {
         try {
             const MOVIE_URL_TOPRATED = `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
             const response = await fetch(MOVIE_URL_TOPRATED);
             const data = await response.json();
-            setMoviesTopRated(data.results);
+            setData({ moviesTopRated: data.results, loading: true });
         } catch (error) {
             console.log(error)
         }
@@ -25,8 +28,9 @@ const DiscoverMovieTopRated = () => {
         handleMovies();
     }, []);
 
+    const { moviesTopRated, loading } = data;
 
-    return (
+    return (<>{loading === false ? <Loader /> :
         <div id="discover-item" className="container">
 
             <div className="discover-header">
@@ -54,7 +58,7 @@ const DiscoverMovieTopRated = () => {
             </div>
 
         </div>
-    )
+    }</>)
 }
 
 export default DiscoverMovieTopRated;

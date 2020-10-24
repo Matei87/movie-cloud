@@ -14,7 +14,7 @@ const YOUTUBE = 'https://www.youtube.com/embed/';
 
 
 const DetailsMovie = (props) => {
-    const { id } = props.location.state;
+    const { id } = props.match.params;
     const [detailsMovie, setDetailsMovie] = useState({
         //movies
         backdrop_path_movie: '',

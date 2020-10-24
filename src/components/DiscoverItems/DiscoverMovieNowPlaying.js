@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './DiscoverItems.css';
 
+import Loader from '../Loader/Loader';
 import { IoIosStar } from "react-icons/io";
 import { HiClock } from "react-icons/hi";
 import { Link } from 'react-router-dom';
@@ -8,14 +9,17 @@ import defaultmovie from '../../pictures/defaultmovie.png';
 
 
 const DiscoverMovieNowPlaying = () => {
-    const [moviesNowPlaying, setMoviesNowPlaying] = useState([]);
+    const [data, setData] = useState({
+        moviesNowPlaying: [],
+        loading: false
+    });
 
     const handleMovies = async () => {
         try {
             const MOVIE_URL_NOWPLAYING = `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
             const response = await fetch(MOVIE_URL_NOWPLAYING);
             const data = await response.json();
-            setMoviesNowPlaying(data.results);
+            setData({ moviesNowPlaying: data.results, loading: true });
         } catch (error) {
             console.log(error)
         }
@@ -25,8 +29,9 @@ const DiscoverMovieNowPlaying = () => {
         handleMovies();
     }, []);
 
+    const { moviesNowPlaying, loading } = data;
 
-    return (
+    return (<>{loading === false ? <Loader /> :
         <div id="discover-item" className="container">
 
             <div className="discover-header">
@@ -54,7 +59,7 @@ const DiscoverMovieNowPlaying = () => {
             </div>
 
         </div>
-    )
+    }</>)
 }
 
 export default DiscoverMovieNowPlaying;

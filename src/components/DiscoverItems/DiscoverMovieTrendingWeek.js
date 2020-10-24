@@ -1,20 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import './DiscoverItems.css';
 
+import Loader from '../Loader/Loader';
 import { IoIosStar } from "react-icons/io";
 import { HiClock } from "react-icons/hi";
 import { Link } from 'react-router-dom';
 import defaultmovie from '../../pictures/defaultmovie.png';
 
 const DiscoverMovieTrendingWeek = () => {
-    const [moviesTrendingWeek, setMoviesTrendingWeek] = useState([]);
+    const [data, setData] = useState({
+        moviesTrendingWeek: [],
+        loading: false
+    });
 
     const handleMovies = async () => {
         try {
             const MOVIE_URL_TRENDINGWEEK = `https://api.themoviedb.org/3/trending/movie/week?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
             const response = await fetch(MOVIE_URL_TRENDINGWEEK);
             const data = await response.json();
-            setMoviesTrendingWeek(data.results);
+            setData({ moviesTrendingWeek: data.results, loading: true });
         } catch (error) {
             console.log(error)
         }
@@ -24,8 +28,9 @@ const DiscoverMovieTrendingWeek = () => {
         handleMovies();
     }, []);
 
+    const { moviesTrendingWeek, loading } = data;
 
-    return (
+    return (<>{loading === false ? <Loader /> :
         <div id="discover-item" className="container">
 
             <div className="discover-header">
@@ -53,7 +58,7 @@ const DiscoverMovieTrendingWeek = () => {
             </div>
 
         </div>
-    )
+    }</>)
 }
 
 export default DiscoverMovieTrendingWeek;

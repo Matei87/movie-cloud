@@ -1,20 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import './DiscoverItems.css';
 
+import Loader from '../Loader/Loader';
 import { IoIosStar } from "react-icons/io";
 import { HiClock } from "react-icons/hi";
 import { Link } from 'react-router-dom';
 import defaultmovie from '../../pictures/defaultmovie.png';
 
 const DiscoverTvTrendingDay = () => {
-    const [tvTrendingDay, setTvTrendingDay] = useState([]);
+    const [data, setData] = useState({
+        tvTrendingDay: [],
+        loading: false
+    });
 
     const handleTV = async () => {
         try {
             const TV_URL_TRENDINGDAY = `https://api.themoviedb.org/3/trending/tv/day?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
             const response = await fetch(TV_URL_TRENDINGDAY);
             const data = await response.json();
-            setTvTrendingDay(data.results);
+            setData({ tvTrendingDay: data.results, loading: true });
         } catch (error) {
             console.log(error)
         }
@@ -24,8 +28,9 @@ const DiscoverTvTrendingDay = () => {
         handleTV();
     }, []);
 
+    const { tvTrendingDay, loading } = data;
 
-    return (
+    return (<>{loading === false ? <Loader /> :
         <div id="discover-item" className="container">
 
             <div className="discover-header">
@@ -53,7 +58,7 @@ const DiscoverTvTrendingDay = () => {
             </div>
 
         </div>
-    )
+    }</>)
 }
 
 export default DiscoverTvTrendingDay;
