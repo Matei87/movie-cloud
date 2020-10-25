@@ -329,7 +329,7 @@
 /* Small  */
 @media (min-width: 576px) and (max-width: 767.98px) {
     #details .details-header-details {
-        padding: 10rem 12.5rem;
+        padding: 5rem 12.5rem;
     }
     #details .details-content .details-content-cast .details-content-cast-content .slick-prev, 
     #details .details-content .details-content-trailers .slick-prev {

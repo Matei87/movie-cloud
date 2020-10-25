@@ -122,7 +122,12 @@ footer .footer-contact a:not(:last-child) {
 
 /* Small  */
 @media (min-width: 576px) and (max-width: 767.98px) { 
-    
+    footer .footer-links {
+        grid-column-start: 1;
+    }
+    footer .footer-image {
+        grid-column-start: 9;
+    }
 }
 
  /* Medium  */
