@@ -13,8 +13,6 @@ import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const PICTURE = 'https://image.tmdb.org/t/p/w200';
-
 
 const DetailsPerson = (props) => {
     const [data, setData] = useState({
@@ -37,12 +35,15 @@ const DetailsPerson = (props) => {
     });
 
     const { id } = props.match.params;
-    const fetchPersonDetails = async () => {
 
+    useEffect(() => {
+        fetchPersonDetails();
+    }, []);
+
+    const fetchPersonDetails = async () => {
         const urlPersonDetails = `https://api.themoviedb.org/3/person/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`;
         const urlMovieCredits = `https://api.themoviedb.org/3/person/${id}/movie_credits?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`;
         const urlTvCredits = `https://api.themoviedb.org/3/person/${id}/tv_credits?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`;
-
         const request = [
             fetch(urlPersonDetails),
             fetch(urlMovieCredits),
@@ -58,15 +59,11 @@ const DetailsPerson = (props) => {
         });
     }
 
-    useEffect(() => {
-        fetchPersonDetails();
-    }, []);
-
     const { name, biography, birthday, known_for, place_of_birth, picture, movie_credits, tv_credits, loading } = data;
     const settings = {
         dots: false,
         infinite: false,
-        slidesToShow: movie_credits.length > 6 ? 6 : movie_credits.length,
+        slidesToShow: 6,
         slidesToScroll: 1,
         autoplay: false,
         speed: 3000,
@@ -116,7 +113,7 @@ const DetailsPerson = (props) => {
 
                 <div className="person-details-header-content">
                     <div className="person-details-header-content-picture">
-                        <img src={picture ? PICTURE + picture : pic} alt={name} />
+                        <img src={picture ? 'https://image.tmdb.org/t/p/w200' + picture : pic} alt={name} />
                     </div>
                     <div className="person-details-header-content-details">
                         <span className="person-details-header-content-details-title">{name}</span>
@@ -152,7 +149,7 @@ const DetailsPerson = (props) => {
                                     <div className="person-details-content-cast-movies-cast-item-footer">
                                         <p>
                                             {content.release_date ? <span className="HiClock"><HiClock /> {(content.release_date).slice(0, 4)}</span> : null}
-                                            {content.vote_average !== null ? <span className="IoIosStar"><IoIosStar /> {((content.vote_average || 0))}</span> : null}
+                                            {content.vote_average ? <span className="IoIosStar"><IoIosStar /> {((content.vote_average || 0))}</span> : null}
                                         </p>
                                     </div>
                                 </div>
@@ -178,7 +175,7 @@ const DetailsPerson = (props) => {
                                     <div className="person-details-content-cast-tv-cast-item-footer">
                                         <p>
                                             {content.first_air_date.length > 0 ? <span className="HiClock"><HiClock /> {(content.first_air_date).slice(0, 4)}</span> : null}
-                                            {content.vote_average !== null ? <span className="IoIosStar"><IoIosStar /> {((content.vote_average || 0))}</span> : null}
+                                            {content.vote_average ? <span className="IoIosStar"><IoIosStar /> {((content.vote_average || 0))}</span> : null}
                                         </p>
                                     </div>
                                 </div>

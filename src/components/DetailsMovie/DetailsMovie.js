@@ -9,9 +9,6 @@ import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const PICTURE = 'https://image.tmdb.org/t/p/w300';
-const YOUTUBE = 'https://www.youtube.com/embed/';
-
 
 const DetailsMovie = (props) => {
     const { id } = props.match.params;
@@ -43,6 +40,10 @@ const DetailsMovie = (props) => {
 
     });
 
+    useEffect(() => {
+        fetchDetails();
+    }, []);
+
     const fetchDetails = async () => {
         const urlMovieReviews = `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
         const urlMovieVideo = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`;
@@ -66,11 +67,6 @@ const DetailsMovie = (props) => {
         });
     }
 
-    useEffect(() => {
-        fetchDetails();
-    }, []);
-
-
     const { backdrop_path_movie, genres_movie, title_movie, vote_average_movie, vote_count_movie, release_date_movie,
         runtime_movie, original_language_movie, tagline, overview_movie, poster_path_movie, cast, trailers, reviews, loading } = detailsMovie;
 
@@ -90,7 +86,7 @@ const DetailsMovie = (props) => {
     const settings = {
         dots: false,
         infinite: false,
-        slidesToShow: cast.length > 6 ? 6 : cast.length,
+        slidesToShow: 6,
         slidesToScroll: 1,
         autoplay: false,
         speed: 3000,
@@ -185,7 +181,7 @@ const DetailsMovie = (props) => {
                         <span className="details-header-details-genres">{finishMovie}</span>
                         <span className="details-header-details-runtime-rating">
                             {release_date_movie ? <>{(release_date_movie).split('-').reverse().join('/')} | </> : null}
-                            {runtime_movie ? <>{runtime_movie} mins | </> : null}
+                            {runtime_movie ? <>{`${runtime_movie} mins | `}</> : null}
                             {original_language_movie ? <>{(original_language_movie).toUpperCase()} | </> : null}
                             {vote_average_movie ? vote_average_movie : null} {vote_count_movie ? <>{`(${vote_count_movie})`}</> : null}
                         </span>
@@ -214,7 +210,7 @@ const DetailsMovie = (props) => {
                                             pathname: `/details/person/${content.id}`,
                                             state: { id: content.id }
                                         }}>
-                                            <img src={content.profile_path === null ? pic : (PICTURE + content.profile_path)} alt={content.name} />
+                                            <img src={content.profile_path === null ? pic : 'https://image.tmdb.org/t/p/w300' + content.profile_path} alt={content.name} />
                                         </Link>
                                         <div className="details-content-cast-item-footer">
                                             <p>{content.name}</p>
@@ -233,7 +229,7 @@ const DetailsMovie = (props) => {
                             <Slider {...settingsvideo}>
                                 {slicedTrailers.map(content =>
                                     <div className="details-content-trailers-item" key={content.key}>
-                                        <iframe src={YOUTUBE + content.key} title={content.key} />
+                                        <iframe src={'https://www.youtube.com/embed/' + content.key} title={content.key} />
                                     </div>
                                 )}
                             </Slider>

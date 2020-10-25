@@ -9,8 +9,6 @@ import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const PICTURE = 'https://image.tmdb.org/t/p/w300';
-const YOUTUBE = 'https://www.youtube.com/embed/';
 
 const DetailsTv = (props) => {
     const { id } = props.match.params;
@@ -89,7 +87,7 @@ const DetailsTv = (props) => {
     const settings = {
         dots: false,
         infinite: false,
-        slidesToShow: cast.length > 6 ? 6 : cast.length,
+        slidesToShow: 6,
         slidesToScroll: 1,
         autoplay: false,
         speed: 3000,
@@ -186,7 +184,6 @@ const DetailsTv = (props) => {
                             {original_language_tv ? <>{`${(original_language_tv).toUpperCase()} | `}</> : null}
                             {vote_average_tv ? vote_average_tv : null} {vote_count_tv ? <>{`(${vote_count_tv})`}</> : null}
                         </span>
-                        {/* {(release_date_movie).slice(8, 10) && (first_air_date_tv).slice(8, 10)}/{(release_date_movie).slice(5, 7) && (first_air_date_tv).slice(5, 7)}/{(release_date_movie).slice(0, 4) && (first_air_date_tv).slice(0, 4)} */}
                     </div>
                 </div>
 
@@ -210,7 +207,7 @@ const DetailsTv = (props) => {
                                             pathname: `/details/person/${content.id}`,
                                             state: { id: content.id }
                                         }}>
-                                            <img src={content.profile_path === null ? pic : (PICTURE + content.profile_path)} alt={content.name} />
+                                            <img src={content.profile_path === null ? pic : 'https://image.tmdb.org/t/p/w300' + content.profile_path} alt={content.name} />
                                         </Link>
                                         <div className="details-content-cast-item-footer">
                                             <p>{content.name}</p>
@@ -229,7 +226,7 @@ const DetailsTv = (props) => {
                             <Slider {...settingsvideo}>
                                 {slicedTrailers.map(content =>
                                     <div className="details-content-trailers-item" key={content.key}>
-                                        <iframe src={YOUTUBE + content.key} title={content.key} />
+                                        <iframe src={`https://www.youtube.com/embed/${content.key}`} title={content.key} />
                                     </div>
                                 )}
                             </Slider>

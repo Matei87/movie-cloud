@@ -11,8 +11,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 
-const PROFIL = 'http://image.tmdb.org/t/p/w300';
-
 const Discover = () => {
     const [data, setData] = useState({
         all: [],
@@ -123,12 +121,12 @@ const Discover = () => {
                                             pathname: `/details/movie/${content.id}`,
                                             state: { id: content.id }
                                         }}>
-                                            <img src={PROFIL + content.poster_path} alt={content.title} />
+                                            <img src={'https://image.tmdb.org/t/p/w300' + content.poster_path} alt={content.title} />
                                         </Link>
                                         <div className="discover-trends-movies-item-footer">
                                             <p>
-                                                <span className="HiClock"><HiClock /> {(content.release_date).slice(0, 4)}</span>
-                                                <span className="IoIosStar"><IoIosStar /> {((content.vote_average || 0))}</span>
+                                                {content.release_date ? <span className="HiClock"><HiClock /> {(content.release_date).slice(0, 4)}</span> : null}
+                                                {content.vote_average ? <span className="IoIosStar"><IoIosStar /> {((content.vote_average || 0))}</span> : null}
                                             </p>
                                         </div>
                                     </div>
@@ -164,12 +162,12 @@ const Discover = () => {
                                             pathname: `/details/tv/${content.id}`,
                                             state: { id: content.id }
                                         }}>
-                                            <img src={PROFIL + content.poster_path} alt={content.title} />
+                                            <img src={'https://image.tmdb.org/t/p/w300' + content.poster_path} alt={content.title} />
                                         </Link>
                                         <div className="discover-trends-tv-item-footer">
                                             <p>
-                                                <span className="HiClock"><HiClock /> {(content.first_air_date).slice(0, 4)}</span>
-                                                <span className="IoIosStar"><IoIosStar /> {((content.vote_average || 0))}</span>
+                                                {content.first_air_date ? <span className="HiClock"><HiClock /> {(content.first_air_date).slice(0, 4)}</span> : null}
+                                                {content.vote_average ? <span className="IoIosStar"><IoIosStar /> {((content.vote_average || 0))}</span> : null}
                                             </p>
                                         </div>
                                     </div>
@@ -185,56 +183,56 @@ const Discover = () => {
 
         <div className="discover-all">
             <Link to="/discover/movie/upcoming" className="discover-all-item">
-                <img src="https://image.tmdb.org/t/p/w400/4gKyQ1McHa8ZKDsYoyKQSevF01J.jpg" alt="" />
+                <img src="https://image.tmdb.org/t/p/w400/4gKyQ1McHa8ZKDsYoyKQSevF01J.jpg" alt="movie-upcoming" />
                 <div>
                     <HiClock />
                     <span>Upcoming Movies</span>
                 </div>
             </Link>
             <Link to="/discover/movie/popular" className="discover-all-item">
-                <img src="https://image.tmdb.org/t/p/w400/zzWGRw277MNoCs3zhyG3YmYQsXv.jpg" alt="" />
+                <img src="https://image.tmdb.org/t/p/w400/zzWGRw277MNoCs3zhyG3YmYQsXv.jpg" alt="movie-popular" />
                 <div>
                     <IoIosTrendingUp />
                     <span>Popular Movies</span>
                 </div>
             </Link>
             <Link to="/discover/movie/now-playing" className="discover-all-item">
-                <img src="https://image.tmdb.org/t/p/w400/5UkzNSOK561c2QRy2Zr4AkADzLT.jpg" alt="" />
+                <img src="https://image.tmdb.org/t/p/w400/5UkzNSOK561c2QRy2Zr4AkADzLT.jpg" alt="movie-now-playing" />
                 <div>
                     <IoIosPlay />
                     <span>Now Playing Movies</span>
                 </div>
             </Link>
             <Link to="/discover/movie/top-rated" className="discover-all-item">
-                <img src="https://image.tmdb.org/t/p/w400/rSPw7tgCH9c6NqICZef4kZjFOQ5.jpg" alt="" />
+                <img src="https://image.tmdb.org/t/p/w400/rSPw7tgCH9c6NqICZef4kZjFOQ5.jpg" alt="movie-top-rated" />
                 <div>
                     <IoIosTrophy />
                     <span>Top Rated Movies</span>
                 </div>
             </Link>
             <Link to="/discover/tv/airing-today" className="discover-all-item">
-                <img src="https://image.tmdb.org/t/p/w400/adZ9ldSlkGfLfsHNbh37ZThCcgU.jpg" alt="" />
+                <img src="https://image.tmdb.org/t/p/w400/adZ9ldSlkGfLfsHNbh37ZThCcgU.jpg" alt="tv-airing-today" />
                 <div>
                     <IoIosPlay />
                     <span>Airing Today TV Shows</span>
                 </div>
             </Link>
             <Link to="/discover/tv/popular" className="discover-all-item">
-                <img src="https://image.tmdb.org/t/p/w400/hTExot1sfn7dHZjGrk0Aiwpntxt.jpg" alt="" />
+                <img src="https://image.tmdb.org/t/p/w400/hTExot1sfn7dHZjGrk0Aiwpntxt.jpg" alt="tv-popular" />
                 <div>
                     <IoIosTrendingUp />
                     <span>Popular TV Shows</span>
                 </div>
             </Link>
             <Link to="/discover/tv/on-the-air" className="discover-all-item">
-                <img src="https://image.tmdb.org/t/p/w400/58PON1OrnBiX6CqEHgeWKVwrCn6.jpg" alt="" />
+                <img src="https://image.tmdb.org/t/p/w400/58PON1OrnBiX6CqEHgeWKVwrCn6.jpg" alt="tv-on-the-air" />
                 <div>
                     <HiClock />
                     <span>On The Air TV Shows</span>
                 </div>
             </Link>
             <Link to="/discover/tv/top-rated" className="discover-all-item">
-                <img src="https://image.tmdb.org/t/p/w400/92OPBZpLc82y8CzOtrQ8P9RDvIN.jpg" alt="" />
+                <img src="https://image.tmdb.org/t/p/w400/92OPBZpLc82y8CzOtrQ8P9RDvIN.jpg" alt="tv-top-rated" />
                 <div>
                     <IoIosTrophy />
                     <span>Top Rated TV Shows</span>
@@ -270,8 +268,8 @@ const Discover = () => {
                                         </Link>
                                         <div className="discover-tvtrending-item-footer">
                                             <p>
-                                                <span className="HiClock"><HiClock /> {(content.first_air_date).slice(0, 4)}</span>
-                                                <span className="IoIosStar"><IoIosStar /> {((content.vote_average || 0))}</span>
+                                                {content.first_air_date ? <span className="HiClock"><HiClock /> {(content.first_air_date).slice(0, 4)}</span> : null}
+                                                {content.vote_average ? <span className="IoIosStar"><IoIosStar /> {((content.vote_average || 0))}</span> : null}
                                             </p>
                                         </div>
                                     </div>

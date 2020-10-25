@@ -10,7 +10,6 @@ import 'slick-carousel/slick/slick-theme.css';
 import { IoIosStar } from "react-icons/io";
 import { HiClock } from "react-icons/hi";
 
-const profil = 'http://image.tmdb.org/t/p/w300';
 
 const MovieTvContainer = () => {
     const { moviesUpcoming, moviesPopular, moviesNowPlaying, moviesTopRated,
@@ -74,12 +73,12 @@ const MovieTvContainer = () => {
                                         pathname: `/details/movie/${content.id}`,
                                         state: { id: content.id }
                                     }}>
-                                        <img src={profil + content.poster_path} alt={content.title} />
+                                        <img src={'https://image.tmdb.org/t/p/w300' + content.poster_path} alt={content.title} />
                                     </Link>
                                     <div className="item-footer">
                                         <p>
-                                            <span><HiClock /> {(content.release_date).slice(0, 4)}</span>
-                                            <span><IoIosStar /> {((content.vote_average || 0))}</span>
+                                            {content.release_date ? <span><HiClock /> {(content.release_date).slice(0, 4)}</span> : null}
+                                            {content.vote_average ? <span><IoIosStar /> {((content.vote_average || 0))}</span> : null}
                                         </p>
                                     </div>
                                 </div>
@@ -100,12 +99,12 @@ const MovieTvContainer = () => {
                                         pathname: `/details/movie/${content.id}`,
                                         state: { id: content.id }
                                     }}>
-                                        <img src={profil + content.poster_path} alt={content.title} />
+                                        <img src={'https://image.tmdb.org/t/p/w300' + content.poster_path} alt={content.title} />
                                     </Link>
                                     <div className="item-footer">
                                         <p>
-                                            <span><HiClock /> {(content.release_date).slice(0, 4)}</span>
-                                            <span><IoIosStar /> {((content.vote_average || 0))}</span>
+                                            {content.release_date ? <span><HiClock /> {(content.release_date).slice(0, 4)}</span> : null}
+                                            {content.vote_average ? <span><IoIosStar /> {((content.vote_average || 0))}</span> : null}
                                         </p>
                                     </div>
                                 </div>
@@ -126,12 +125,12 @@ const MovieTvContainer = () => {
                                         pathname: `/details/movie/${content.id}`,
                                         state: { id: content.id }
                                     }}>
-                                        <img src={profil + content.poster_path} alt={content.title} />
+                                        <img src={'https://image.tmdb.org/t/p/w300' + content.poster_path} alt={content.title} />
                                     </Link>
                                     <div className="item-footer">
                                         <p>
-                                            <span><HiClock /> {(content.release_date).slice(0, 4)}</span>
-                                            <span><IoIosStar /> {((content.vote_average || 0))}</span>
+                                            {content.release_date ? <span><HiClock /> {(content.release_date).slice(0, 4)}</span> : null}
+                                            {content.vote_average ? <span><IoIosStar /> {((content.vote_average || 0))}</span> : null}
                                         </p>
                                     </div>
                                 </div>
@@ -152,7 +151,7 @@ const MovieTvContainer = () => {
                                         pathname: `/details/movie/${content.id}`,
                                         state: { id: content.id }
                                     }}>
-                                        <img src={profil + content.poster_path} alt={content.title} />
+                                        <img src={'https://image.tmdb.org/t/p/w300' + content.poster_path} alt={content.title} />
                                     </Link>
                                     <div className="item-footer">
                                         <p>
@@ -183,12 +182,12 @@ const MovieTvContainer = () => {
                                         pathname: `/details/tv/${content.id}`,
                                         state: { id: content.id }
                                     }}>
-                                        <img src={profil + content.poster_path} alt={content.title} />
+                                        <img src={'https://image.tmdb.org/t/p/w300' + content.poster_path} alt={content.title} />
                                     </Link>
                                     <div className="item-footer">
                                         <p>
-                                            <span><HiClock /> {(content.first_air_date).slice(0, 4)}</span>
-                                            <span><IoIosStar /> {((content.vote_average || 0))}</span>
+                                            {content.first_air_date ? <span><HiClock /> {(content.first_air_date).slice(0, 4)}</span> : null}
+                                            {content.vote_average ? <span><IoIosStar /> {((content.vote_average || 0))}</span> : null}
                                         </p>
                                     </div>
                                 </div>
@@ -209,12 +208,12 @@ const MovieTvContainer = () => {
                                         pathname: `/details/tv/${content.id}`,
                                         state: { id: content.id }
                                     }}>
-                                        <img src={profil + content.poster_path} alt={content.title} />
+                                        <img src={'https://image.tmdb.org/t/p/w300' + content.poster_path} alt={content.title} />
                                     </Link>
                                     <div className="item-footer">
                                         <p>
-                                            <span><HiClock /> {(content.first_air_date).slice(0, 4)}</span>
-                                            <span><IoIosStar /> {((content.vote_average || 0))}</span>
+                                            {content.first_air_date ? <span><HiClock /> {(content.first_air_date).slice(0, 4)}</span> : null}
+                                            {content.vote_average ? <span><IoIosStar /> {((content.vote_average || 0))}</span> : null}
                                         </p>
                                     </div>
                                 </div>
@@ -235,12 +234,12 @@ const MovieTvContainer = () => {
                                         pathname: `/details/tv/${content.id}`,
                                         state: { id: content.id }
                                     }}>
-                                        <img src={profil + content.poster_path} alt={content.title} />
+                                        <img src={'https://image.tmdb.org/t/p/w300' + content.poster_path} alt={content.title} />
                                     </Link>
                                     <div className="item-footer">
                                         <p>
-                                            <span><HiClock /> {(content.first_air_date).slice(0, 4)}</span>
-                                            <span><IoIosStar /> {((content.vote_average || 0))}</span>
+                                            {content.first_air_date ? <span><HiClock /> {(content.first_air_date).slice(0, 4)}</span> : null}
+                                            {content.vote_average ? <span><IoIosStar /> {((content.vote_average || 0))}</span> : null}
                                         </p>
                                     </div>
                                 </div>
@@ -261,7 +260,7 @@ const MovieTvContainer = () => {
                                         pathname: `/details/tv/${content.id}`,
                                         state: { id: content.id }
                                     }}>
-                                        <img src={profil + content.poster_path} alt={content.title} />
+                                        <img src={'https://image.tmdb.org/t/p/w300' + content.poster_path} alt={content.title} />
                                     </Link>
                                     <div className="item-footer">
                                         <p>
