@@ -319,11 +319,11 @@
 }
 #discover .discover-tvtrending .slick-prev {
     left: 5% !important; z-index: 1;
-    top: 50% !important;
+    top: 45% !important; transform: translateY(-50%);
 }
 #discover .discover-tvtrending .slick-next  {
     right: 5% !important; z-index: 1;
-    top: 50% !important;
+    top: 45% !important; transform: translateY(-50%);
 }
 #discover .discover-tvtrending .slick-prev::before {
     content: '❮' !important;
@@ -398,12 +398,10 @@
         font-size: 1.75rem;
     }
     #discover .discover-tvtrending .slick-prev {
-        left: 5% !important; z-index: 1;
-        top: 50% !important;
+        left: 5% !important;
     }
     #discover .discover-tvtrending .slick-next  {
-        right: 10% !important; z-index: 1;
-        top: 50% !important;
+        right: 10% !important;
     }
     #discover .discover-tvtrending .discover-tvtrending-container-item .discover-tvtrending-container-item-content .discover-tvtrending-container-item-content-item .discover-tvtrending-item-footer p span.IoIosStar svg {
         margin-top: .1rem;

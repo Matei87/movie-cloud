@@ -275,7 +275,7 @@ const Discover = () => {
                                     </div>
                                     <div className="discover-tvtrending-container-item-content-item-description">
                                         <span>{content.name}</span>
-                                        <span>{content.overview}</span>
+                                        <span>{content.overview.split(' ').length > 30 ? content.overview.split(' ').slice(0, 20).join(' ') + '.' : content.overview}</span>
                                     </div>
                                 </div>
 
