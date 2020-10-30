@@ -264,7 +264,7 @@
     display: flex; align-items: center;
 }
 #discover .discover-tvtrending .discover-tvtrending-container-item .discover-tvtrending-container-item-content .discover-tvtrending-container-item-content-item {
-    width: 15rem !important; height: 24.5rem;
+    min-width: 15rem !important; height: 24.5rem;
     border: 2px solid #252934; background-color: #252934;
 }
 #discover .discover-tvtrending .discover-tvtrending-container-item .discover-tvtrending-container-item-content .discover-tvtrending-container-item-content-item-description {
