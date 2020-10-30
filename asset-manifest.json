@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/movie-cloud/static/css/main.af27f979.chunk.css",
+    "main.css": "/movie-cloud/static/css/main.fe546619.chunk.css",
     "main.js": "/movie-cloud/static/js/main.9fe4603e.chunk.js",
     "main.js.map": "/movie-cloud/static/js/main.9fe4603e.chunk.js.map",
     "runtime-main.js": "/movie-cloud/static/js/runtime-main.e9c49ca6.js",
@@ -9,10 +9,10 @@
     "static/js/2.e9506a8f.chunk.js": "/movie-cloud/static/js/2.e9506a8f.chunk.js",
     "static/js/2.e9506a8f.chunk.js.map": "/movie-cloud/static/js/2.e9506a8f.chunk.js.map",
     "index.html": "/movie-cloud/index.html",
-    "precache-manifest.df5391c4f0ae3a2e8de2d8b2c2671f5f.js": "/movie-cloud/precache-manifest.df5391c4f0ae3a2e8de2d8b2c2671f5f.js",
+    "precache-manifest.10ad0b24a85dbb06a0cb7069c2bb4a30.js": "/movie-cloud/precache-manifest.10ad0b24a85dbb06a0cb7069c2bb4a30.js",
     "service-worker.js": "/movie-cloud/service-worker.js",
     "static/css/2.855234ec.chunk.css.map": "/movie-cloud/static/css/2.855234ec.chunk.css.map",
-    "static/css/main.af27f979.chunk.css.map": "/movie-cloud/static/css/main.af27f979.chunk.css.map",
+    "static/css/main.fe546619.chunk.css.map": "/movie-cloud/static/css/main.fe546619.chunk.css.map",
     "static/js/2.e9506a8f.chunk.js.LICENSE.txt": "/movie-cloud/static/js/2.e9506a8f.chunk.js.LICENSE.txt",
     "static/media/moviecloudresized.png": "/movie-cloud/static/media/moviecloudresized.0b22b9a5.png",
     "static/media/slick-theme.css": "/movie-cloud/static/media/slick.f97e3bbf.svg",
@@ -22,7 +22,7 @@
     "static/js/runtime-main.e9c49ca6.js",
     "static/css/2.855234ec.chunk.css",
     "static/js/2.e9506a8f.chunk.js",
-    "static/css/main.af27f979.chunk.css",
+    "static/css/main.fe546619.chunk.css",
     "static/js/main.9fe4603e.chunk.js"
   ]
 }
