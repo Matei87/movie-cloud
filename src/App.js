@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
@@ -39,18 +39,12 @@ import 'jquery/dist/jquery.min.js'
 
 const App = () => {
 
-  // useEffect(() => {
-  //   window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-  // }, [])
-
   return (
     <MovieState>
-
       <Router>
         <ScrollToTop>
           <Navbar />
           <Switch>
-
 
             <Route exact path="/" >
               <Header />
@@ -82,7 +76,6 @@ const App = () => {
           <Footer />
         </ScrollToTop>
       </Router>
-
     </MovieState>
   );
 }
