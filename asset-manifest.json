@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/movie-cloud/static/css/main.fe546619.chunk.css",
-    "main.js": "/movie-cloud/static/js/main.67cf6b9b.chunk.js",
-    "main.js.map": "/movie-cloud/static/js/main.67cf6b9b.chunk.js.map",
+    "main.js": "/movie-cloud/static/js/main.7792c4be.chunk.js",
+    "main.js.map": "/movie-cloud/static/js/main.7792c4be.chunk.js.map",
     "runtime-main.js": "/movie-cloud/static/js/runtime-main.e9c49ca6.js",
     "runtime-main.js.map": "/movie-cloud/static/js/runtime-main.e9c49ca6.js.map",
     "static/css/2.855234ec.chunk.css": "/movie-cloud/static/css/2.855234ec.chunk.css",
     "static/js/2.3ecbda15.chunk.js": "/movie-cloud/static/js/2.3ecbda15.chunk.js",
     "static/js/2.3ecbda15.chunk.js.map": "/movie-cloud/static/js/2.3ecbda15.chunk.js.map",
     "index.html": "/movie-cloud/index.html",
-    "precache-manifest.47387dee47f649be4d9b679ec9c93b94.js": "/movie-cloud/precache-manifest.47387dee47f649be4d9b679ec9c93b94.js",
+    "precache-manifest.674b0aeeb8c37008a2b1d10a95887a34.js": "/movie-cloud/precache-manifest.674b0aeeb8c37008a2b1d10a95887a34.js",
     "service-worker.js": "/movie-cloud/service-worker.js",
     "static/css/2.855234ec.chunk.css.map": "/movie-cloud/static/css/2.855234ec.chunk.css.map",
     "static/css/main.fe546619.chunk.css.map": "/movie-cloud/static/css/main.fe546619.chunk.css.map",
@@ -23,6 +23,6 @@
     "static/css/2.855234ec.chunk.css",
     "static/js/2.3ecbda15.chunk.js",
     "static/css/main.fe546619.chunk.css",
-    "static/js/main.67cf6b9b.chunk.js"
+    "static/js/main.7792c4be.chunk.js"
   ]
 }
