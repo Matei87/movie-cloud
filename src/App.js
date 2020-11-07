@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+
 import MovieState from './context/MovieState';
 import Header from './components/Header/Header';
 import MoviesController from './components/MoviesController/MoviesController';
@@ -36,42 +38,51 @@ import 'jquery/dist/jquery.min.js'
 
 
 const App = () => {
+
+  // useEffect(() => {
+  //   window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  // }, [])
+
   return (
     <MovieState>
-      <Router >
-        <Navbar />
-        <Switch>
+
+      <Router>
+        <ScrollToTop>
+          <Navbar />
+          <Switch>
 
 
-          <Route exact path="/" >
-            <Header />
-            <MoviesController />
-            <MovieTvContainer />
-          </Route>
+            <Route exact path="/" >
+              <Header />
+              <MoviesController />
+              <MovieTvContainer />
+            </Route>
 
-          <Route exact path="/details/movie/:id" component={DetailsMovie} />
-          <Route exact path="/details/tv/:id" component={DetailsTv} />
-          <Route exact path="/details/person/:id" component={DetailsPerson} />
-          <Route exact path="/discover" component={Discover} />
+            <Route exact path="/details/movie/:id" component={DetailsMovie} />
+            <Route exact path="/details/tv/:id" component={DetailsTv} />
+            <Route exact path="/details/person/:id" component={DetailsPerson} />
+            <Route exact path="/discover" component={Discover} />
 
-          <Route exact path="/discover/movie/upcoming" component={DiscoverMovieUpcoming} />
-          <Route exact path="/discover/movie/popular" component={DiscoverMoviePopular} />
-          <Route exact path="/discover/movie/now-playing" component={DiscoverMovieNowPlaying} />
-          <Route exact path="/discover/movie/top-rated" component={DiscoverMovieTopRated} />
-          <Route exact path="/discover/movie/trending-week" component={DiscoverMovieTrendingWeek} />
+            <Route exact path="/discover/movie/upcoming" component={DiscoverMovieUpcoming} />
+            <Route exact path="/discover/movie/popular" component={DiscoverMoviePopular} />
+            <Route exact path="/discover/movie/now-playing" component={DiscoverMovieNowPlaying} />
+            <Route exact path="/discover/movie/top-rated" component={DiscoverMovieTopRated} />
+            <Route exact path="/discover/movie/trending-week" component={DiscoverMovieTrendingWeek} />
 
-          <Route exact path="/discover/tv/airing-today" component={DiscoverTvAiringToday} />
-          <Route exact path="/discover/tv/popular" component={DiscoverTvPopular} />
-          <Route exact path="/discover/tv/on-the-air" component={DiscoverTvOnTheAir} />
-          <Route exact path="/discover/tv/top-rated" component={DiscoverTvTopRated} />
-          <Route exact path="/discover/tv/trending-week" component={DiscoverTvTrendingWeek} />
-          <Route exact path="/discover/tv/trending-today" component={DiscoverTvTrendingDay} />
+            <Route exact path="/discover/tv/airing-today" component={DiscoverTvAiringToday} />
+            <Route exact path="/discover/tv/popular" component={DiscoverTvPopular} />
+            <Route exact path="/discover/tv/on-the-air" component={DiscoverTvOnTheAir} />
+            <Route exact path="/discover/tv/top-rated" component={DiscoverTvTopRated} />
+            <Route exact path="/discover/tv/trending-week" component={DiscoverTvTrendingWeek} />
+            <Route exact path="/discover/tv/trending-today" component={DiscoverTvTrendingDay} />
 
-          <Route exact path="/search" component={Search} />
+            <Route exact path="/search" component={Search} />
 
-        </Switch>
-        <Footer />
+          </Switch>
+          <Footer />
+        </ScrollToTop>
       </Router>
+
     </MovieState>
   );
 }
