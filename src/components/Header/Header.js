@@ -10,7 +10,7 @@ import 'slick-carousel/slick/slick-theme.css';
 const MOVIE_BACKDROP = 'https://image.tmdb.org/t/p/w1280';
 
 const Header = () => {
-    const { moviesUpcoming, tvAiringToday, type, loading } = useContext(MovieContext);
+    const { moviesUpcoming, tvAiringToday, type } = useContext(MovieContext);
 
 
     const settings = {
@@ -258,7 +258,7 @@ const Header = () => {
     handleBackground();
 
 
-    return (<>{loading === false ? null : <div className="header">
+    return (<div className="header">
 
         {type === 'movie' ? < div className='main_container_header'>
 
@@ -309,7 +309,7 @@ const Header = () => {
 
                 </Slider>
             </div>
-        </div> : ''}
+        </div> : null}
 
         {type === 'tv' ? <div className='main_container_header'>
 
@@ -360,11 +360,10 @@ const Header = () => {
 
                 </Slider>
             </div>
-        </div> : ''}
+        </div> : null}
 
-    </div>}</>
-
+    </div>
     )
 }
 
-export default Header
+export default Header;

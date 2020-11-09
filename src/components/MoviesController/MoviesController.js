@@ -1,12 +1,11 @@
 import React, { useContext, useState, useEffect } from 'react';
 import './MoviesController.css';
 
-import Loader from '../Loader/Loader';
 import MovieContext from '../../context/MovieContext';
 
 
 const MoviesController = () => {
-    const { type, handleMovies, handleTV, loading } = useContext(MovieContext);
+    const { type, handleMovies, handleTV } = useContext(MovieContext);
     const [data, setData] = useState(MovieContext);
 
     useEffect(() => {
@@ -24,21 +23,20 @@ const MoviesController = () => {
     }, []);
 
 
-    return (<>{loading === false ? <Loader /> : <div className="MoviesOrTv container">
-        <button className={` btn btn-outline-primary ${type === 'movie' ? 'btn-selected' : null}`}
-            onClick={() => { handleMovies(); setData({ type: 'movie' }) }}
-        >
-            MOVIES
+    return (
+        <div className="MoviesOrTv container">
+            <button className={` btn btn-outline-primary ${type === 'movie' ? 'btn-selected' : null}`}
+                onClick={() => { handleMovies(); setData({ type: 'movie' }) }}
+            >
+                MOVIES
 </button>
-        <button className={` btn btn-outline-primary ${type === 'tv' ? 'btn-selected' : null}`}
-            onClick={() => { handleTV(); setData({ type: 'tv' }) }}
-        >
-            TV SHOWS
+            <button className={` btn btn-outline-primary ${type === 'tv' ? 'btn-selected' : null}`}
+                onClick={() => { handleTV(); setData({ type: 'tv' }) }}
+            >
+                TV SHOWS
 </button>
-    </div>}
-
-
-    </>)
+        </div>
+    )
 }
 
 export default MoviesController;

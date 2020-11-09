@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './DetailsTv.css';
 
-import Loader from '../Loader/Loader';
 import theatre from '../../pictures/theatre.jpg';
 import pic from '../../pictures/default.png';
 import { Link } from 'react-router-dom';
@@ -262,7 +261,7 @@ const DetailsTv = (props) => {
         );
     }
 
-    return (<>{loading === false ? <Loader /> : content}</>)
+    return (<>{content}</>)
 }
 
 export default DetailsTv;

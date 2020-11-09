@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './DiscoverItems.css';
 
-import Loader from '../Loader/Loader';
 import { IoIosStar } from "react-icons/io";
 import { HiClock } from "react-icons/hi";
 import { Link } from 'react-router-dom';
@@ -9,8 +8,7 @@ import defaultmovie from '../../pictures/defaultmovie.png';
 
 const DiscoverTvOnTheAir = () => {
     const [data, setData] = useState({
-        tvOnTheAir: [],
-        loading: false
+        tvOnTheAir: []
     });
 
     const handleTV = async () => {
@@ -18,7 +16,7 @@ const DiscoverTvOnTheAir = () => {
             const TV_URL_ONTHEAIR = `https://api.themoviedb.org/3/tv/on_the_air?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
             const response = await fetch(TV_URL_ONTHEAIR);
             const data = await response.json();
-            setData({ tvOnTheAir: data.results, loading: true });
+            setData({ tvOnTheAir: data.results });
         } catch (error) {
             console.log(error)
         }
@@ -28,9 +26,9 @@ const DiscoverTvOnTheAir = () => {
         handleTV();
     }, []);
 
-    const { tvOnTheAir, loading } = data;
+    const { tvOnTheAir } = data;
 
-    return (<>{loading === false ? <Loader /> :
+    return (
         <div id="discover-item" className="container">
 
             <div className="discover-header">
@@ -58,7 +56,7 @@ const DiscoverTvOnTheAir = () => {
             </div>
 
         </div>
-    }</>)
+    )
 }
 
 export default DiscoverTvOnTheAir;

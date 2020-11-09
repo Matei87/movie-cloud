@@ -13,7 +13,7 @@ import { HiClock } from "react-icons/hi";
 
 const MovieTvContainer = () => {
     const { moviesUpcoming, moviesPopular, moviesNowPlaying, moviesTopRated,
-        tvAiringToday, tvPopular, tvOnTheAir, tvTopRated, type, loading } = useContext(MovieContext);
+        tvAiringToday, tvPopular, tvOnTheAir, tvTopRated, type } = useContext(MovieContext);
 
     const settings = {
         dots: false,
@@ -277,7 +277,7 @@ const MovieTvContainer = () => {
         );
     }
 
-    return (<div className="content container">{loading === false ? null : content}</div>)
+    return (<div className="content container">{content}</div>)
 }
 
 export default MovieTvContainer;

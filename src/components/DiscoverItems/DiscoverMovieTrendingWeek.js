@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './DiscoverItems.css';
 
-import Loader from '../Loader/Loader';
 import { IoIosStar } from "react-icons/io";
 import { HiClock } from "react-icons/hi";
 import { Link } from 'react-router-dom';
@@ -9,8 +8,7 @@ import defaultmovie from '../../pictures/defaultmovie.png';
 
 const DiscoverMovieTrendingWeek = () => {
     const [data, setData] = useState({
-        moviesTrendingWeek: [],
-        loading: false
+        moviesTrendingWeek: []
     });
 
     const handleMovies = async () => {
@@ -28,9 +26,9 @@ const DiscoverMovieTrendingWeek = () => {
         handleMovies();
     }, []);
 
-    const { moviesTrendingWeek, loading } = data;
+    const { moviesTrendingWeek } = data;
 
-    return (<>{loading === false ? <Loader /> :
+    return (
         <div id="discover-item" className="container">
 
             <div className="discover-header">
@@ -58,7 +56,7 @@ const DiscoverMovieTrendingWeek = () => {
             </div>
 
         </div>
-    }</>)
+    )
 }
 
 export default DiscoverMovieTrendingWeek;

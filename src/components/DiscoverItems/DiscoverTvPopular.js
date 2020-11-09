@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './DiscoverItems.css';
 
-import Loader from '../Loader/Loader';
 import { IoIosStar } from "react-icons/io";
 import { HiClock } from "react-icons/hi";
 import { Link } from 'react-router-dom';
@@ -9,8 +8,7 @@ import defaultmovie from '../../pictures/defaultmovie.png';
 
 const DiscoverTvPopular = () => {
     const [data, setData] = useState({
-        tvPopular: [],
-        loading: false
+        tvPopular: []
     });
 
     const handleTV = async () => {
@@ -18,7 +16,7 @@ const DiscoverTvPopular = () => {
             const TV_URL_POPULAR = `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
             const response = await fetch(TV_URL_POPULAR);
             const data = await response.json();
-            setData({ tvPopular: data.results, loading: true });
+            setData({ tvPopular: data.results });
         } catch (error) {
             console.log(error)
         }
@@ -28,9 +26,9 @@ const DiscoverTvPopular = () => {
         handleTV();
     }, []);
 
-    const { tvPopular, loading } = data;
+    const { tvPopular } = data;
 
-    return (<>{loading === false ? <Loader /> :
+    return (
         <div id="discover-item" className="container">
 
             <div className="discover-header">
@@ -58,7 +56,7 @@ const DiscoverTvPopular = () => {
             </div>
 
         </div>
-    }</>)
+    )
 }
 
 export default DiscoverTvPopular;

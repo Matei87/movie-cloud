@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../DetailsTv/DetailsTv.css';
 
-import Loader from '../Loader/Loader';
 import theatre from '../../pictures/theatre.jpg';
 import pic from '../../pictures/default.png';
 import { Link } from 'react-router-dom';
@@ -265,7 +264,7 @@ const DetailsMovie = (props) => {
         );
     }
 
-    return (<>{loading === false ? <Loader /> : content}</>)
+    return (<>{content}</>)
 }
 
 export default DetailsMovie;

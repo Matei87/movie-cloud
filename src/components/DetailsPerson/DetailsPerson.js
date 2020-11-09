@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './DetailsPerson.css';
 
-import Loader from '../Loader/Loader';
 import theatre from '../../pictures/theatre.jpg';
 import pic from '../../pictures/default.png';
 import defaultmovie from '../../pictures/defaultmovie.png';
@@ -200,7 +199,7 @@ const DetailsPerson = (props) => {
         </div>
     )
 
-    return (<>{loading === false ? <Loader /> : content}</>);
+    return (<>{content}</>);
 }
 
 export default DetailsPerson;

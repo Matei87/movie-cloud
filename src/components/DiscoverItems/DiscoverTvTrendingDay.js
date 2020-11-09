@@ -9,8 +9,7 @@ import defaultmovie from '../../pictures/defaultmovie.png';
 
 const DiscoverTvTrendingDay = () => {
     const [data, setData] = useState({
-        tvTrendingDay: [],
-        loading: false
+        tvTrendingDay: []
     });
 
     const handleTV = async () => {
@@ -18,7 +17,7 @@ const DiscoverTvTrendingDay = () => {
             const TV_URL_TRENDINGDAY = `https://api.themoviedb.org/3/trending/tv/day?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`;
             const response = await fetch(TV_URL_TRENDINGDAY);
             const data = await response.json();
-            setData({ tvTrendingDay: data.results, loading: true });
+            setData({ tvTrendingDay: data.results });
         } catch (error) {
             console.log(error)
         }
@@ -28,9 +27,9 @@ const DiscoverTvTrendingDay = () => {
         handleTV();
     }, []);
 
-    const { tvTrendingDay, loading } = data;
+    const { tvTrendingDay } = data;
 
-    return (<>{loading === false ? <Loader /> :
+    return (
         <div id="discover-item" className="container">
 
             <div className="discover-header">
@@ -58,7 +57,7 @@ const DiscoverTvTrendingDay = () => {
             </div>
 
         </div>
-    }</>)
+    )
 }
 
 export default DiscoverTvTrendingDay;
