@@ -10,6 +10,7 @@ const Homepage = () => {
             <Header />
             <MoviesController />
             <MovieTvContainer />
+
         </>
     )
 }
