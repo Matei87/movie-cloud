@@ -23,7 +23,7 @@ const DetailsTv = (props) => {
         episode_run_time_tv: '',
         first_air_date_tv: '',
         overview_tv: '',
-        taglineTV: undefined,
+        taglineTV: '',
 
         //cast
         cast: [],
@@ -56,7 +56,7 @@ const DetailsTv = (props) => {
         ];
         const response = await Promise.all(request);
         const data = await Promise.all(response.map(res => res.json()));
-        //console.log(data);
+        //console.log(data[0]);
         setDetailsTv({
             backdrop_path_tv: data[0].backdrop_path, genres_tv: data[0].genres, episode_run_time_tv: data[0].episode_run_time,
             title_tv: data[0].name, vote_average_tv: data[0].vote_average, vote_count_tv: data[0].vote_count,
@@ -164,8 +164,9 @@ const DetailsTv = (props) => {
         ]
     };
 
+    //console.log(taglineTV);
     let content;
-    if (taglineTV === undefined) {
+    if (taglineTV === '' || taglineTV) {
         content = (
             <div id="details">
 

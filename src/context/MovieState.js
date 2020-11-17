@@ -99,7 +99,7 @@ const MovieState = (props) => {
 
     }
 
-    //console.log(data.tvTrendingDay)
+    console.log(data.tvTrendingDay)
     return (
         <MovieContext.Provider
             value={
