@@ -264,11 +264,12 @@
     display: flex; align-items: center;
 }
 #discover .discover-tvtrending .discover-tvtrending-container-item .discover-tvtrending-container-item-content .discover-tvtrending-container-item-content-item {
-    min-width: 15rem !important; height: 24.5rem;
+    width: min(15rem, 25rem);
+    height: 24.5rem;
     border: 2px solid #252934; background-color: #252934;
 }
 #discover .discover-tvtrending .discover-tvtrending-container-item .discover-tvtrending-container-item-content .discover-tvtrending-container-item-content-item-description {
-    margin-left: 5rem; max-width: 50rem;
+    margin-left: 5rem; max-width: 40rem;
     display: flex; justify-content: space-between; flex-direction: column;
     color: #fff; z-index: 99;
 }
@@ -279,7 +280,8 @@
     font-size: 1.75rem;
 }
 #discover .discover-tvtrending .discover-tvtrending-container-item .discover-tvtrending-container-item-content .discover-tvtrending-container-item-content-item a img {
-    width: 100%;  height: 21.2rem; 
+    width: 100%;
+    height: 21.2rem; 
     background-size: cover;
     opacity: 1;
 }
@@ -389,7 +391,7 @@
         margin-left: 2rem; max-width: 30rem;
     }
     #discover .discover-tvtrending .discover-tvtrending-container-item .discover-tvtrending-container-item-content .discover-tvtrending-container-item-content-item {
-        width: calc(15rem - 4px);
+        /* width: calc(15rem - 4px); */
     }
     #discover .discover-tvtrending .discover-tvtrending-container-item .discover-tvtrending-container-item-content .discover-tvtrending-container-item-content-item-description span:first-child {
         font-size: 2.5rem;
@@ -421,7 +423,7 @@
         width: 60rem;
     }
     #discover .discover-tvtrending .discover-tvtrending-container-item .discover-tvtrending-container-item-content .discover-tvtrending-container-item-content-item a img {
-        width: calc(15rem - 4px);
+        /* width: calc(15rem - 4px); */
     }
 }
 
@@ -438,7 +440,7 @@
         width: 60rem;
     }
     #discover .discover-tvtrending .discover-tvtrending-container-item .discover-tvtrending-container-item-content .discover-tvtrending-container-item-content-item a img {
-        width: calc(15rem - 4px);
+        /* width: calc(15rem - 4px); */
     }
 }
 
@@ -448,7 +450,7 @@
         width: 60rem;
     }
     #discover .discover-tvtrending .discover-tvtrending-container-item .discover-tvtrending-container-item-content .discover-tvtrending-container-item-content-item a img {
-        width: calc(15rem - 4px);
+        /* width: calc(15rem - 4px); */
     }
 }
 
