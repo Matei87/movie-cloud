@@ -5,6 +5,8 @@ import { RiMailSendLine } from "react-icons/ri";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
 import { Link } from 'react-router-dom';
 
+import Logo from '../../pictures/moviecloudresized.png';
+
 const Footer = () => {
     return (
         <footer>
@@ -20,7 +22,7 @@ const Footer = () => {
             </div>
             <div className="footer-image">
                 <Link to="/">
-                    <img src={require('../../pictures/moviecloudresized.png')} alt="logo" />
+                    <img src={Logo} alt="logo" />
                 </Link>
             </div>
             <div className="footer-contact">

@@ -5,6 +5,7 @@ import { ImHome } from "react-icons/im";
 import { IoIosCompass, IoMdSearch } from "react-icons/io";
 
 import MovieContext from '../../context/MovieContext';
+import Logo from '../../pictures/moviecloudresized.png';
 
 const Navbar = () => {
     const { handleSearch } = useContext(MovieContext);
@@ -26,7 +27,7 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg fixed-top navbar-dark">
             <Link to="/" className="navbar-brand">
-                <img src={require('../../pictures/moviecloudresized.png')} alt="logo" />
+                <img src={Logo} alt="logo" />
             </Link>
             <form className="" onSubmit={handleSubmit}>
                 <input

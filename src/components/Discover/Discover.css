@@ -1,8 +1,6 @@
 #discover { margin-top: 6rem;
     display: grid;
-    /* grid-template-rows: 60rem 55rem 90rem; */
     grid-template-columns: repeat(8, 1fr);
-    
 }
 
 
@@ -133,7 +131,7 @@
 #discover .discover-trends .discover-trends-movies .slick-next,
 #discover .discover-trends .discover-trends-tv .slick-next {
     right: 8% !important; z-index: 1;
-    top: 40% !important; transform:
+    top: 40% !important;
 }
 #discover .discover-trends .discover-trends-movies .slick-prev::before,
 #discover .discover-trends .discover-trends-tv .slick-prev::before {
@@ -391,9 +389,6 @@
     #discover .discover-tvtrending .discover-tvtrending-container-item .discover-tvtrending-container-item-content .discover-tvtrending-container-item-content-item-description {
         margin-left: 2rem; max-width: 30rem;
     }
-    #discover .discover-tvtrending .discover-tvtrending-container-item .discover-tvtrending-container-item-content .discover-tvtrending-container-item-content-item {
-        /* width: calc(15rem - 4px); */
-    }
     #discover .discover-tvtrending .discover-tvtrending-container-item .discover-tvtrending-container-item-content .discover-tvtrending-container-item-content-item-description span:first-child {
         font-size: 2.5rem;
     }
@@ -423,9 +418,7 @@
     #discover .discover-tvtrending .discover-tvtrending-container-item .discover-tvtrending-container-item-content {
         width: 65rem;
     }
-    #discover .discover-tvtrending .discover-tvtrending-container-item .discover-tvtrending-container-item-content .discover-tvtrending-container-item-content-item a img {
-        /* width: calc(15rem - 4px); */
-    }
+
 }
 
  /* Medium  */
@@ -437,22 +430,12 @@
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(3, 1fr);
     }
-    #discover .discover-tvtrending .discover-tvtrending-container-item .discover-tvtrending-container-item-content {
-        /* width: 70rem; */
-    }
-    #discover .discover-tvtrending .discover-tvtrending-container-item .discover-tvtrending-container-item-content .discover-tvtrending-container-item-content-item a img {
-        /* width: calc(15rem - 4px); */
-    }
+
 }
 
 /* Large  */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
-    #discover .discover-tvtrending .discover-tvtrending-container-item .discover-tvtrending-container-item-content {
-        /* width: 75rem; */
-    }
-    #discover .discover-tvtrending .discover-tvtrending-container-item .discover-tvtrending-container-item-content .discover-tvtrending-container-item-content-item a img {
-        /* width: calc(15rem - 4px); */
-    }
+
 }
 
 /* Extra large  */
