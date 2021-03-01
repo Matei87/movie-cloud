@@ -182,7 +182,7 @@ const MovieTvContainer = () => {
                                         pathname: `/details/tv/${content.id}`,
                                         state: { id: content.id }
                                     }}>
-                                        <img src={'https://image.tmdb.org/t/p/w300' + content.poster_path} alt={content.title} />
+                                        <img src={'https://image.tmdb.org/t/p/w300' + content.poster_path} alt={content.name} />
                                     </Link>
                                     <div className="item-footer">
                                         <p>
@@ -208,7 +208,7 @@ const MovieTvContainer = () => {
                                         pathname: `/details/tv/${content.id}`,
                                         state: { id: content.id }
                                     }}>
-                                        <img src={'https://image.tmdb.org/t/p/w300' + content.poster_path} alt={content.title} />
+                                        <img src={'https://image.tmdb.org/t/p/w300' + content.poster_path} alt={content.name} />
                                     </Link>
                                     <div className="item-footer">
                                         <p>
@@ -234,7 +234,7 @@ const MovieTvContainer = () => {
                                         pathname: `/details/tv/${content.id}`,
                                         state: { id: content.id }
                                     }}>
-                                        <img src={'https://image.tmdb.org/t/p/w300' + content.poster_path} alt={content.title} />
+                                        <img src={'https://image.tmdb.org/t/p/w300' + content.poster_path} alt={content.name} />
                                     </Link>
                                     <div className="item-footer">
                                         <p>
@@ -260,7 +260,7 @@ const MovieTvContainer = () => {
                                         pathname: `/details/tv/${content.id}`,
                                         state: { id: content.id }
                                     }}>
-                                        <img src={'https://image.tmdb.org/t/p/w300' + content.poster_path} alt={content.title} />
+                                        <img src={'https://image.tmdb.org/t/p/w300' + content.poster_path} alt={content.name} />
                                     </Link>
                                     <div className="item-footer">
                                         <p>

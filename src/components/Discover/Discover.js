@@ -153,14 +153,14 @@ const Discover = () => {
                             <Slider {...sets}>
                                 {tvTrendingWeek.map(content =>
                                     <div className="discover-trends-tv-container-item" key={content.id}>
-                                        <img src={`https://image.tmdb.org/t/p/w1280${content.backdrop_path || content.poster_path}`} alt={content.title} />
+                                        <img src={`https://image.tmdb.org/t/p/w1280${content.backdrop_path || content.poster_path}`} alt={content.name} />
 
                                         <div className="discover-trends-tv-container-item-content">
                                             <Link to={{
                                                 pathname: `/details/tv/${content.id}`,
                                                 state: { id: content.id }
                                             }}>
-                                                <img src={'https://image.tmdb.org/t/p/w300' + content.poster_path} alt={content.title} />
+                                                <img src={'https://image.tmdb.org/t/p/w300' + content.poster_path} alt={content.name} />
                                             </Link>
                                             <div className="discover-trends-tv-item-footer">
                                                 <p>
@@ -254,7 +254,7 @@ const Discover = () => {
                         <Slider {...sets}>
                             {tvTrendingDay.map(content =>
                                 <div className="discover-tvtrending-container-item" key={content.id}>
-                                    <img src={`https://image.tmdb.org/t/p/w1280${content.backdrop_path || content.poster_path}`} alt={content.title} />
+                                    <img src={`https://image.tmdb.org/t/p/w1280${content.backdrop_path || content.poster_path}`} alt={content.name} />
 
                                     <div className="discover-tvtrending-container-item-content">
                                         <div className="discover-tvtrending-container-item-content-item">
@@ -262,7 +262,7 @@ const Discover = () => {
                                                 pathname: `/details/tv/${content.id}`,
                                                 state: { id: content.id }
                                             }}>
-                                                <img src={`https://image.tmdb.org/t/p/w1280${content.poster_path}`} alt={content.title} />
+                                                <img src={`https://image.tmdb.org/t/p/w1280${content.poster_path}`} alt={content.name} />
                                             </Link>
                                             <div className="discover-tvtrending-item-footer">
                                                 <p>
