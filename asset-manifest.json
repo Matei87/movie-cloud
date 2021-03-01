@@ -5,7 +5,7 @@
     "static/css/1.2ebf8b4a.chunk.css": "/movie-cloud/static/css/1.2ebf8b4a.chunk.css",
     "static/js/1.7b615986.chunk.js": "/movie-cloud/static/js/1.7b615986.chunk.js",
     "static/js/1.7b615986.chunk.js.map": "/movie-cloud/static/js/1.7b615986.chunk.js.map",
-    "main.css": "/movie-cloud/static/css/main.c05fc862.chunk.css",
+    "main.css": "/movie-cloud/static/css/main.785aa6b7.chunk.css",
     "main.js": "/movie-cloud/static/js/main.1bdea67f.chunk.js",
     "main.js.map": "/movie-cloud/static/js/main.1bdea67f.chunk.js.map",
     "runtime-main.js": "/movie-cloud/static/js/runtime-main.38d73b36.js",
@@ -84,7 +84,7 @@
     "static/css/7.5a7bf7bc.chunk.css.map": "/movie-cloud/static/css/7.5a7bf7bc.chunk.css.map",
     "static/css/8.6ec5c806.chunk.css.map": "/movie-cloud/static/css/8.6ec5c806.chunk.css.map",
     "static/css/9.0c8b12eb.chunk.css.map": "/movie-cloud/static/css/9.0c8b12eb.chunk.css.map",
-    "static/css/main.c05fc862.chunk.css.map": "/movie-cloud/static/css/main.c05fc862.chunk.css.map",
+    "static/css/main.785aa6b7.chunk.css.map": "/movie-cloud/static/css/main.785aa6b7.chunk.css.map",
     "static/js/1.7b615986.chunk.js.LICENSE.txt": "/movie-cloud/static/js/1.7b615986.chunk.js.LICENSE.txt",
     "static/js/4.a632e341.chunk.js.LICENSE.txt": "/movie-cloud/static/js/4.a632e341.chunk.js.LICENSE.txt",
     "static/media/moviecloudresized.5baa8056.png": "/movie-cloud/static/media/moviecloudresized.5baa8056.png",
@@ -95,7 +95,7 @@
     "static/js/runtime-main.38d73b36.js",
     "static/css/4.20aa2d7b.chunk.css",
     "static/js/4.a632e341.chunk.js",
-    "static/css/main.c05fc862.chunk.css",
+    "static/css/main.785aa6b7.chunk.css",
     "static/js/main.1bdea67f.chunk.js"
   ]
 }
