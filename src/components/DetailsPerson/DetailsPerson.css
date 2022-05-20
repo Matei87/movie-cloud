@@ -1,438 +1,866 @@
 #person-details {
-    position: relative;
-    display: flex; flex-direction: column;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 #person-details .person-details-header {
-    width: 100%; height: 100vh;
-    position: relative;
+  width: 100%;
+  height: 100vh;
+  position: relative;
 }
 #person-details .person-details-header-image {
-    width: 100%; height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 #person-details .person-details-header-image::after {
-    content: '';
-    display: block;
-    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(180deg, transparent 0,#000);
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 0, #000);
 }
 #person-details .person-details-header-image img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    opacity: .65;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.65;
 }
-
 
 #person-details .person-details-header-content {
-    position: absolute;  bottom: 0; 
-    z-index: 999;
-    display: flex;
-    color: #fff;
-    font-size: 2rem; padding: 10rem;
+  position: absolute;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  color: #fff;
+  font-size: 2rem;
+  padding: 10rem;
 }
 
-#person-details .person-details-header-content .person-details-header-content-picture img {
-    width: 15rem; height: 20rem;
-    object-fit: cover; border: 2px solid #333;
-    margin-right: 3rem;
+#person-details
+  .person-details-header-content
+  .person-details-header-content-picture
+  img {
+  width: 15rem;
+  height: 20rem;
+  object-fit: cover;
+  border: 2px solid #333;
+  margin-right: 3rem;
 }
 
-#person-details .person-details-header-content .person-details-header-content-details {
-    display: flex; justify-content: space-evenly;
-    flex-direction: column; margin-bottom: 1rem;
+#person-details
+  .person-details-header-content
+  .person-details-header-content-details {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin-bottom: 1rem;
 }
-#person-details .person-details-header-content .person-details-header-content-details .person-details-header-content-details-title {
-    font-size: 3rem; font-weight: 500;
+#person-details
+  .person-details-header-content
+  .person-details-header-content-details
+  .person-details-header-content-details-title {
+  font-size: 3rem;
+  font-weight: 500;
 }
-
 
 #person-details .person-details-content {
-    padding: 10rem 0; color: #fff;
-    display: flex; flex-direction: column;
+  padding: 10rem 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
 }
-
-
 
 /* BIOGRAPHY  */
 #person-details .person-details-content .person-details-content-biography {
-    padding-bottom: 5rem; margin-bottom: 5rem;
-    border-bottom: 2px solid #252934; color: #fff;
+  padding-bottom: 5rem;
+  margin-bottom: 5rem;
+  border-bottom: 2px solid #252934;
+  color: #fff;
 }
-#person-details .person-details-content .person-details-content-biography .person-details-content-biography-title {
-    font-size: 2.5rem; letter-spacing: .25rem; font-weight: 500;
-    position: relative; margin-bottom: 3rem; padding-bottom: 1rem;
+#person-details
+  .person-details-content
+  .person-details-content-biography
+  .person-details-content-biography-title {
+  font-size: 2.5rem;
+  letter-spacing: 0.25rem;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
 }
-#person-details .person-details-content .person-details-content-biography .person-details-content-biography-title::after {
-    content: '';
-    display: block;
-    width: 16rem; height: 1px;
-    background: #fff;
-    position: absolute;
-    bottom: 0; left: 0;
+#person-details
+  .person-details-content
+  .person-details-content-biography
+  .person-details-content-biography-title::after {
+  content: '';
+  display: block;
+  width: 16rem;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
-#person-details .person-details-content .person-details-content-biography .person-details-content-biography-content  {
-    font-size: 1.75rem; margin: 0;
+#person-details
+  .person-details-content
+  .person-details-content-biography
+  .person-details-content-biography-content {
+  font-size: 1.75rem;
+  margin: 0;
 }
-
 
 /* MOVIE CREDITS */
 #person-details .person-details-content .person-details-content-cast-movies {
-    padding-bottom: 5rem; margin-bottom: 5rem;
-    border-bottom: 2px solid #252934; color: #fff;
+  padding-bottom: 5rem;
+  margin-bottom: 5rem;
+  border-bottom: 2px solid #252934;
+  color: #fff;
 }
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-header .person-details-content-cast-movies-title {
-    font-size: 2.5rem; letter-spacing: .25rem; font-weight: 500;
-    position: relative; margin-bottom: 3rem; padding-bottom: 1rem;
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-header
+  .person-details-content-cast-movies-title {
+  font-size: 2.5rem;
+  letter-spacing: 0.25rem;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
 }
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-header .person-details-content-cast-movies-title::after {
-    content: '';
-    display: block;
-    width: 16rem; height: 1px;
-    background: #fff;
-    position: absolute;
-    bottom: 0; left: 0;
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-header
+  .person-details-content-cast-movies-title::after {
+  content: '';
+  display: block;
+  width: 16rem;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .person-details-content-cast-movies-cast-item {
-    border: 2px solid #252934;
-    height: 24.5rem;
-    width: 15rem !important;
-    background-color: #252934;
-    position: relative;
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-content
+  .person-details-content-cast-movies-cast-item {
+  border: 2px solid #252934;
+  height: 24.5rem;
+  width: 15rem !important;
+  background-color: #252934;
+  position: relative;
 }
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .person-details-content-cast-movies-cast-item a {
-    width: 100%;  height: 21.2rem;
-    position: absolute;
-    top: 0;
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-content
+  .person-details-content-cast-movies-cast-item
+  a {
+  width: 100%;
+  height: 21.2rem;
+  position: absolute;
+  top: 0;
 }
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .person-details-content-cast-movies-cast-item a img {
-    width: 100%;  height: 100%;
-    object-fit: cover;
-    opacity: .5;
-    transition: all .25s linear;
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-content
+  .person-details-content-cast-movies-cast-item
+  a
+  img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  transition: all 0.25s linear;
 }
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .person-details-content-cast-movies-cast-item a img:hover {
-    opacity: 1;
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-content
+  .person-details-content-cast-movies-cast-item
+  a
+  img:hover {
+  opacity: 1;
 }
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .person-details-content-cast-movies-cast-item .person-details-content-cast-movies-cast-item-footer {
-    position: absolute;
-    bottom: 0; width: 100%;
-    font-size: 1.75rem; font-weight: 500;
-    display: flex; justify-content: center; align-items: center;
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-content
+  .person-details-content-cast-movies-cast-item
+  .person-details-content-cast-movies-cast-item-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 1.75rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .person-details-content-cast-movies-cast-item .person-details-content-cast-movies-cast-item-footer p {
-    margin-bottom: 0; color: #ddd; width: 100%;
-    display: flex; justify-content: space-around; align-items: center;
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-content
+  .person-details-content-cast-movies-cast-item
+  .person-details-content-cast-movies-cast-item-footer
+  p {
+  margin-bottom: 0;
+  color: #ddd;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .person-details-content-cast-movies-cast-item .person-details-content-cast-movies-cast-item-footer p span {
-    display: flex; align-items: center;
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-content
+  .person-details-content-cast-movies-cast-item
+  .person-details-content-cast-movies-cast-item-footer
+  p
+  span {
+  display: flex;
+  align-items: center;
 }
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .person-details-content-cast-movies-cast-item .person-details-content-cast-movies-cast-item-footer p span svg {
-    margin-right: .5rem;
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-content
+  .person-details-content-cast-movies-cast-item
+  .person-details-content-cast-movies-cast-item-footer
+  p
+  span
+  svg {
+  margin-right: 0.5rem;
 }
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .person-details-content-cast-movies-cast-item .person-details-content-cast-movies-cast-item-footer p span.HiClock svg {
-    color: var(--main-red); 
-    opacity: .65; margin-top: .2rem;
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-content
+  .person-details-content-cast-movies-cast-item
+  .person-details-content-cast-movies-cast-item-footer
+  p
+  span.HiClock
+  svg {
+  color: var(--main-red);
+  opacity: 0.65;
+  margin-top: 0.2rem;
 }
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .person-details-content-cast-movies-cast-item .person-details-content-cast-movies-cast-item-footer p span.IoIosStar svg {
-    color: gold; margin-top: .2rem;
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-content
+  .person-details-content-cast-movies-cast-item
+  .person-details-content-cast-movies-cast-item-footer
+  p
+  span.IoIosStar
+  svg {
+  color: gold;
+  margin-top: 0.2rem;
 }
 
-
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .slick-track {
-    display: flex !important; margin: 0 !important;
-    align-content: center;
-    position: relative; 
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-content
+  .slick-track {
+  display: flex !important;
+  margin: 0 !important;
+  align-content: center;
+  position: relative;
 }
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .slick-prev {
-    left: 95.5% !important;
-    top: -30% !important;
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-content
+  .slick-prev {
+  left: 95.5% !important;
+  top: -30% !important;
 }
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .slick-next {
-    left: 97.5% !important;
-    top: -30% !important;
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-content
+  .slick-next {
+  left: 97.5% !important;
+  top: -30% !important;
 }
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .slick-prev,
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .slick-next {
-    transform: translate(-50%, -50%) !important;
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-content
+  .slick-prev,
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-content
+  .slick-next {
+  transform: translate(-50%, -50%) !important;
 }
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .slick-prev::before {
-    content: '❮' !important;
-    color: #fff !important;
-    opacity: 1 !important;
-    font-size: 3rem !important;
-    transition: all .25s linear;
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-content
+  .slick-prev::before {
+  content: '❮' !important;
+  color: #fff !important;
+  opacity: 1 !important;
+  font-size: 3rem !important;
+  transition: all 0.25s linear;
 }
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .slick-next::before {
-    content: '❯' !important;
-    color: #fff !important;
-    opacity: 1 !important;
-    font-size: 3rem !important;
-    transition: all .25s linear;
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-content
+  .slick-next::before {
+  content: '❯' !important;
+  color: #fff !important;
+  opacity: 1 !important;
+  font-size: 3rem !important;
+  transition: all 0.25s linear;
 }
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .slick-arrow {
-    font-size: 0 !important;
-    width: 0 !important; height: 0 !important;
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-content
+  .slick-arrow {
+  font-size: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
 }
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .slick-arrow:hover {
-    color: var(--main-red) !important;
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-content
+  .slick-arrow:hover {
+  color: var(--main-red) !important;
 }
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .slick-prev:hover::before,
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .slick-next:hover::before {
-    cursor: pointer;
-    color: var(--main-red) !important;
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-content
+  .slick-prev:hover::before,
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-content
+  .slick-next:hover::before {
+  cursor: pointer;
+  color: var(--main-red) !important;
 }
-#person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .slick-slider .slick-list .slick-track .slick-slide {
-    width: 200px !important;
+#person-details
+  .person-details-content
+  .person-details-content-cast-movies
+  .person-details-content-cast-movies-content
+  .slick-slider
+  .slick-list
+  .slick-track
+  .slick-slide {
+  width: 200px !important;
 }
-
-
-
 
 /* TV CREDITS */
 #person-details .person-details-content .person-details-content-cast-tv {
-    padding-bottom: 5rem; margin-bottom: 5rem;
-    border-bottom: 2px solid #252934; color: #fff;
+  padding-bottom: 5rem;
+  margin-bottom: 5rem;
+  border-bottom: 2px solid #252934;
+  color: #fff;
 }
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-header .person-details-content-cast-tv-title {
-    font-size: 2.5rem; letter-spacing: .25rem; font-weight: 500;
-    position: relative; margin-bottom: 3rem; padding-bottom: 1rem;
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-header
+  .person-details-content-cast-tv-title {
+  font-size: 2.5rem;
+  letter-spacing: 0.25rem;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
 }
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-header .person-details-content-cast-tv-title::after {
-    content: '';
-    display: block;
-    width: 16rem; height: 1px;
-    background: #fff;
-    position: absolute;
-    bottom: 0; left: 0;
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-header
+  .person-details-content-cast-tv-title::after {
+  content: '';
+  display: block;
+  width: 16rem;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .person-details-content-cast-tv-cast-item {
-    border: 2px solid #252934;
-    height: 24.5rem;
-    width: 15rem !important;
-    background-color: #252934;
-    position: relative;
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-content
+  .person-details-content-cast-tv-cast-item {
+  border: 2px solid #252934;
+  height: 24.5rem;
+  width: 15rem !important;
+  background-color: #252934;
+  position: relative;
 }
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .person-details-content-cast-tv-cast-item a {
-    width: 100%;  height: 21.2rem;
-    position: absolute;
-    top: 0;
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-content
+  .person-details-content-cast-tv-cast-item
+  a {
+  width: 100%;
+  height: 21.2rem;
+  position: absolute;
+  top: 0;
 }
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .person-details-content-cast-tv-cast-item a img {
-    width: 100%;  height: 100%;
-    object-fit: cover;
-    opacity: .5;
-    transition: all .25s linear;
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-content
+  .person-details-content-cast-tv-cast-item
+  a
+  img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  transition: all 0.25s linear;
 }
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .person-details-content-cast-tv-cast-item a img:hover {
-    opacity: 1;
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-content
+  .person-details-content-cast-tv-cast-item
+  a
+  img:hover {
+  opacity: 1;
 }
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .person-details-content-cast-tv-cast-item .person-details-content-cast-tv-cast-item-footer {
-    position: absolute;
-    bottom: 0; width: 100%;
-    font-size: 1.75rem; font-weight: 500;
-    display: flex; justify-content: center; align-items: center;
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-content
+  .person-details-content-cast-tv-cast-item
+  .person-details-content-cast-tv-cast-item-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 1.75rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .person-details-content-cast-tv-cast-item .person-details-content-cast-tv-cast-item-footer p {
-    margin-bottom: 0; color: #ddd; width: 100%;
-    display: flex; justify-content: space-around; align-items: center;
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-content
+  .person-details-content-cast-tv-cast-item
+  .person-details-content-cast-tv-cast-item-footer
+  p {
+  margin-bottom: 0;
+  color: #ddd;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .person-details-content-cast-tv-cast-item .person-details-content-cast-tv-cast-item-footer p span {
-    display: flex; align-items: center;
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-content
+  .person-details-content-cast-tv-cast-item
+  .person-details-content-cast-tv-cast-item-footer
+  p
+  span {
+  display: flex;
+  align-items: center;
 }
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .person-details-content-cast-tv-cast-item .person-details-content-cast-tv-cast-item-footer p span svg {
-    margin-right: .5rem;
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-content
+  .person-details-content-cast-tv-cast-item
+  .person-details-content-cast-tv-cast-item-footer
+  p
+  span
+  svg {
+  margin-right: 0.5rem;
 }
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .person-details-content-cast-tv-cast-item .person-details-content-cast-tv-cast-item-footer p span.HiClock svg {
-    color: var(--main-red); 
-    opacity: .64; margin-top: .2rem;
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-content
+  .person-details-content-cast-tv-cast-item
+  .person-details-content-cast-tv-cast-item-footer
+  p
+  span.HiClock
+  svg {
+  color: var(--main-red);
+  opacity: 0.64;
+  margin-top: 0.2rem;
 }
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .person-details-content-cast-tv-cast-item .person-details-content-cast-tv-cast-item-footer p span.IoIosStar svg {
-    color: gold; margin-top: .2rem;
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-content
+  .person-details-content-cast-tv-cast-item
+  .person-details-content-cast-tv-cast-item-footer
+  p
+  span.IoIosStar
+  svg {
+  color: gold;
+  margin-top: 0.2rem;
 }
 
-
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .slick-track {
-    display: flex !important; margin: 0 !important;
-    align-content: center;
-    position: relative;
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-content
+  .slick-track {
+  display: flex !important;
+  margin: 0 !important;
+  align-content: center;
+  position: relative;
 }
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .slick-prev {
-    left: 95.5% !important;
-    top: -30% !important;
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-content
+  .slick-prev {
+  left: 95.5% !important;
+  top: -30% !important;
 }
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .slick-next {
-    left: 97.5% !important;
-    top: -30% !important;
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-content
+  .slick-next {
+  left: 97.5% !important;
+  top: -30% !important;
 }
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .slick-prev,
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .slick-next {
-    transform: translate(-50%, -50%) !important;
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-content
+  .slick-prev,
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-content
+  .slick-next {
+  transform: translate(-50%, -50%) !important;
 }
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .slick-prev::before {
-    content: '❮' !important;
-    color: #fff !important;
-    opacity: 1 !important;
-    font-size: 3rem !important;
-    transition: all .25s linear;
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-content
+  .slick-prev::before {
+  content: '❮' !important;
+  color: #fff !important;
+  opacity: 1 !important;
+  font-size: 3rem !important;
+  transition: all 0.25s linear;
 }
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .slick-next::before {
-    content: '❯' !important;
-    color: #fff !important;
-    opacity: 1 !important;
-    font-size: 3rem !important;
-    transition: all .25s linear;
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-content
+  .slick-next::before {
+  content: '❯' !important;
+  color: #fff !important;
+  opacity: 1 !important;
+  font-size: 3rem !important;
+  transition: all 0.25s linear;
 }
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .slick-arrow {
-    font-size: 0 !important;
-    width: 0 !important; height: 0 !important;
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-content
+  .slick-arrow {
+  font-size: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
 }
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .slick-arrow:hover {
-    color: var(--main-red) !important;
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-content
+  .slick-arrow:hover {
+  color: var(--main-red) !important;
 }
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .slick-prev:hover::before,
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .slick-next:hover::before {
-    cursor: pointer;
-    color: var(--main-red) !important;
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-content
+  .slick-prev:hover::before,
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-content
+  .slick-next:hover::before {
+  cursor: pointer;
+  color: var(--main-red) !important;
 }
-#person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .slick-slider .slick-list .slick-track .slick-slide {
-    width: 200px !important;
+#person-details
+  .person-details-content
+  .person-details-content-cast-tv
+  .person-details-content-cast-tv-content
+  .slick-slider
+  .slick-list
+  .slick-track
+  .slick-slide {
+  width: 200px !important;
 }
-
-
-
 
 /* COMMENTS */
 #person-details .person-details-content .person-details-content-reviews {
-    margin-bottom: 5rem;
+  margin-bottom: 5rem;
 }
 
-#person-details .person-details-content .person-details-content-reviews .person-details-content-reviews-header .person-details-content-reviews-title {
-    font-size: 2.5rem; letter-spacing: .25rem; font-weight: 500;
-    position: relative; margin-bottom: 3rem; padding-bottom: 1rem;
+#person-details
+  .person-details-content
+  .person-details-content-reviews
+  .person-details-content-reviews-header
+  .person-details-content-reviews-title {
+  font-size: 2.5rem;
+  letter-spacing: 0.25rem;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
 }
-#person-details .person-details-content .person-details-content-reviews .person-details-content-reviews-header .person-details-content-reviews-title::after {
-    content: '';
-    display: block;
-    width: 16rem; height: 1px;
-    background: #fff;
-    position: absolute;
-    bottom: 0; left: 0;
+#person-details
+  .person-details-content
+  .person-details-content-reviews
+  .person-details-content-reviews-header
+  .person-details-content-reviews-title::after {
+  content: '';
+  display: block;
+  width: 16rem;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
-#person-details .person-details-content .person-details-content-reviews .person-details-content-reviews-content .person-details-content-review-item {
-    background: rgba(37,41,52,.8);
-    border: 2px solid #1b242f;
-    padding: 5rem; word-break: break-word;
+#person-details
+  .person-details-content
+  .person-details-content-reviews
+  .person-details-content-reviews-content
+  .person-details-content-review-item {
+  background: rgba(37, 41, 52, 0.8);
+  border: 2px solid #1b242f;
+  padding: 5rem;
+  word-break: break-word;
 }
-#person-details .person-details-content .person-details-content-reviews .person-details-content-reviews-content .person-details-content-review-item .person-details-content-review-item-content {
-    font-size: 1.75rem;
+#person-details
+  .person-details-content
+  .person-details-content-reviews
+  .person-details-content-reviews-content
+  .person-details-content-review-item
+  .person-details-content-review-item-content {
+  font-size: 1.75rem;
 }
-
-
-
 
 /* MEDIA QUERIES */
 /* Extra small  */
-@media (max-width: 575.98px) { 
-    #person-details .person-details-header, #person-details .person-details-header-image {
-        height: 45rem;
-    }
-    #person-details .person-details-content {
-        padding: 5rem;
-        font-size: 1.75rem;
-    }
-    #person-details .person-details-header-content {
-        padding: 3rem;
-    }
-    #person-details .person-details-header-content .person-details-header-content-details {
-        font-size: 1.5rem;
-    }
-   #person-details .person-details-header-content .person-details-header-content-details .person-details-header-content-details-title {
-        font-size: 2rem;
-    }
-    #person-details .person-details-content {
-        padding: 5rem 3rem 0;
-    }
-    #person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .slick-slider .slick-list .slick-track .slick-slide,
-    #person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .slick-slider .slick-list .slick-track .slick-slide {
-        width: 156px !important;
-    }
-    #person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .slick-prev,
-    #person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .slick-prev {
-        left: 86% !important;
-        top: -30% !important;
-    }
-    #person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .slick-next,
-    #person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .slick-next {
-        left: 92% !important;
-        top: -30% !important;
-    }
+@media (max-width: 575.98px) {
+  #person-details .person-details-header,
+  #person-details .person-details-header-image {
+    height: 45rem;
+  }
+  #person-details .person-details-content {
+    padding: 5rem;
+    font-size: 1.75rem;
+  }
+  #person-details .person-details-header-content {
+    padding: 3rem;
+  }
+  #person-details
+    .person-details-header-content
+    .person-details-header-content-details {
+    font-size: 1.5rem;
+  }
+  #person-details
+    .person-details-header-content
+    .person-details-header-content-details
+    .person-details-header-content-details-title {
+    font-size: 2rem;
+  }
+  #person-details .person-details-content {
+    padding: 5rem 3rem 0;
+  }
+  #person-details
+    .person-details-content
+    .person-details-content-cast-movies
+    .person-details-content-cast-movies-content
+    .slick-slider
+    .slick-list
+    .slick-track
+    .slick-slide,
+  #person-details
+    .person-details-content
+    .person-details-content-cast-tv
+    .person-details-content-cast-tv-content
+    .slick-slider
+    .slick-list
+    .slick-track
+    .slick-slide {
+    width: 156px !important;
+  }
+  #person-details
+    .person-details-content
+    .person-details-content-cast-movies
+    .person-details-content-cast-movies-content
+    .slick-prev,
+  #person-details
+    .person-details-content
+    .person-details-content-cast-tv
+    .person-details-content-cast-tv-content
+    .slick-prev {
+    left: 86% !important;
+    top: -30% !important;
+  }
+  #person-details
+    .person-details-content
+    .person-details-content-cast-movies
+    .person-details-content-cast-movies-content
+    .slick-next,
+  #person-details
+    .person-details-content
+    .person-details-content-cast-tv
+    .person-details-content-cast-tv-content
+    .slick-next {
+    left: 92% !important;
+    top: -30% !important;
+  }
 
-    #person-details .person-details-content .person-details-content-reviews .person-details-content-reviews-content .person-details-content-review-item {
-        padding: 2rem;
-    }
+  #person-details
+    .person-details-content
+    .person-details-content-reviews
+    .person-details-content-reviews-content
+    .person-details-content-review-item {
+    padding: 2rem;
+  }
 }
 
 /* Small  */
 @media (min-width: 576px) and (max-width: 767.98px) {
-    #person-details .person-details-header-content {
-        padding: 5rem 12.5rem;
-    }
-    #person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .slick-prev,
-    #person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .slick-prev {
-        left: 94.5% !important;
-        top: -27% !important;
-    }
-    #person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .slick-next,
-    #person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .slick-next {
-        left: 98% !important;
-        top: -27% !important;
-    }
+  #person-details .person-details-header-content {
+    padding: 5rem 12.5rem;
+  }
+  #person-details
+    .person-details-content
+    .person-details-content-cast-movies
+    .person-details-content-cast-movies-content
+    .slick-prev,
+  #person-details
+    .person-details-content
+    .person-details-content-cast-tv
+    .person-details-content-cast-tv-content
+    .slick-prev {
+    left: 94.5% !important;
+    top: -27% !important;
+  }
+  #person-details
+    .person-details-content
+    .person-details-content-cast-movies
+    .person-details-content-cast-movies-content
+    .slick-next,
+  #person-details
+    .person-details-content
+    .person-details-content-cast-tv
+    .person-details-content-cast-tv-content
+    .slick-next {
+    left: 98% !important;
+    top: -27% !important;
+  }
 }
 
- /* Medium  */
+/* Medium  */
 @media (min-width: 768px) and (max-width: 991.98px) {
-    #person-details .person-details-header, #person-details .person-details-header-image {
-        height: 55rem;
-    }
-    #person-details .person-details-header-content {
-        padding: 5rem;
-    }
-    #person-details .person-details-content {
-        padding: 10rem 2rem;
-    }
-    #person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .slick-prev,
-    #person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .slick-prev {
-        left: 95.5% !important;
-        top: -27% !important;
-    }
-    #person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .slick-next,
-    #person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .slick-next {
-        left: 98% !important;
-        top: -27% !important;
-    }
+  #person-details .person-details-header,
+  #person-details .person-details-header-image {
+    height: 55rem;
+  }
+  #person-details .person-details-header-content {
+    padding: 5rem;
+  }
+  #person-details .person-details-content {
+    padding: 10rem 2rem;
+  }
+  #person-details
+    .person-details-content
+    .person-details-content-cast-movies
+    .person-details-content-cast-movies-content
+    .slick-prev,
+  #person-details
+    .person-details-content
+    .person-details-content-cast-tv
+    .person-details-content-cast-tv-content
+    .slick-prev {
+    left: 95.5% !important;
+    top: -27% !important;
+  }
+  #person-details
+    .person-details-content
+    .person-details-content-cast-movies
+    .person-details-content-cast-movies-content
+    .slick-next,
+  #person-details
+    .person-details-content
+    .person-details-content-cast-tv
+    .person-details-content-cast-tv-content
+    .slick-next {
+    left: 98% !important;
+    top: -27% !important;
+  }
 }
 
 /* Large  */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-    #person-details .person-details-header-content {
-        padding: 7rem;
-    }
-    #person-details .person-details-content {
-        padding: 10rem 24px;
-    }
-    #person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .slick-prev,
-    #person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .slick-prev {
-        left: 96% !important;
-        top: -30% !important;
-    }
-    #person-details .person-details-content .person-details-content-cast-movies .person-details-content-cast-movies-content .slick-next,
-    #person-details .person-details-content .person-details-content-cast-tv .person-details-content-cast-tv-content .slick-next {
-        left: 98% !important;
-        top: -30% !important;
-    }
-
+  #person-details .person-details-header-content {
+    padding: 7rem;
+  }
+  #person-details .person-details-content {
+    padding: 10rem 24px;
+  }
+  #person-details
+    .person-details-content
+    .person-details-content-cast-movies
+    .person-details-content-cast-movies-content
+    .slick-prev,
+  #person-details
+    .person-details-content
+    .person-details-content-cast-tv
+    .person-details-content-cast-tv-content
+    .slick-prev {
+    left: 96% !important;
+    top: -30% !important;
+  }
+  #person-details
+    .person-details-content
+    .person-details-content-cast-movies
+    .person-details-content-cast-movies-content
+    .slick-next,
+  #person-details
+    .person-details-content
+    .person-details-content-cast-tv
+    .person-details-content-cast-tv-content
+    .slick-next {
+    left: 98% !important;
+    top: -30% !important;
+  }
 }
 
 /* Extra large  */
-@media (min-width: 1200px) { 
-    
+@media (min-width: 1200px) {
 }

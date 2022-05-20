@@ -5,14 +5,13 @@ import MoviesController from '../MoviesController/MoviesController';
 import MovieTvContainer from '../MovieTvContainer/MovieTvContainer';
 
 const Homepage = () => {
-    return (
-        <>
-            <Header />
-            <MoviesController />
-            <MovieTvContainer />
-
-        </>
-    )
-}
+  return (
+    <>
+      <Header />
+      <MoviesController />
+      <MovieTvContainer />
+    </>
+  );
+};
 
 export default Homepage;

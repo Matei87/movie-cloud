@@ -1,110 +1,116 @@
 nav {
-    background-color: rgba(51,51,51,.75) !important;
-    box-shadow: 0 2px 2px var(--main-red);
-    padding: 1rem 1.5rem !important;
+  background-color: rgba(51, 51, 51, 0.75) !important;
+  box-shadow: 0 2px 2px var(--main-red);
+  padding: 1rem 1.5rem !important;
 }
 .navbar {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
 }
 nav .navbar-brand {
-    margin: 0; padding: 0;
+  margin: 0;
+  padding: 0;
 }
 nav .navbar-brand img {
-    width: 5rem; height: 5rem;
-    transition: all .3s linear;
-    position: absolute; left: 0; top: .2rem;
-    margin-left: 2rem;
+  width: 5rem;
+  height: 5rem;
+  transition: all 0.3s linear;
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  margin-left: 2rem;
 }
 nav .navbar-brand img:hover {
-    opacity: .5;
+  opacity: 0.5;
 }
 nav button.btn {
-    border: none;
+  border: none;
 }
 nav button.btn:hover {
-    background: none !important;
+  background: none !important;
 }
 nav svg {
-    font-size: 3rem;
-    color: var(--white);
-    transition: all .3s linear;
+  font-size: 3rem;
+  color: var(--bs-white);
+  transition: all 0.3s linear;
 }
 nav svg:hover {
-    color: var(--main-red);
+  color: var(--main-red);
 }
 
 nav form {
-    display: flex; justify-content: center; align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-nav form input[type="search"] {
-    border-radius: 0 !important;
-    border: none !important; 
-    background: none !important;
-    color: var(--white) !important; font-weight: 500;
-    font-size: 1.75rem;
-    padding: .25rem 1rem;
-    border-bottom: 2px solid var(--white) !important;
-    width: 20rem;
-    transition: all .5s ease;
+nav form input[type='search'] {
+  border-radius: 0 !important;
+  border: none !important;
+  background: none !important;
+  color: var(--bs-white) !important;
+  font-weight: 500;
+  font-size: 1.75rem;
+  padding: 0.25rem 1rem;
+  border-bottom: 2px solid var(--bs-white) !important;
+  width: 20rem;
+  transition: all 0.5s ease;
 }
-nav form input[type="search"]:focus {
-    width: 40rem; 
-    box-shadow: none !important; 
+nav form input[type='search']:focus {
+  width: 40rem;
+  box-shadow: none !important;
 }
 nav form input::placeholder {
-    color: var(--white) !important;
-    font-weight: 500;
+  color: var(--bs-white) !important;
+  font-weight: 500;
 }
 nav #customElements {
-    position: absolute; top: 1.2rem; right: 2rem;
-    display: flex; justify-content: center;
-    margin: 0;
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
 nav #customElements li {
-    display: flex; justify-content: center; align-items: center;
-    padding: .5rem; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
 }
 nav #customElements li:first-child {
-    margin-right: 2rem;
+  margin-right: 2rem;
 }
-
-
 
 /* MEDIA QUERIES */
 /* Extra small  */
-@media (max-width: 575.98px) { 
-    nav {
-        width: 100vw;
-    }
-    nav form input[type="search"] {
-        width: 10rem;
-    }
-    nav form input[type="search"]:focus {
-        width: 20rem; 
-    }
-    nav #customElements li:first-child {
-        margin-right: 0;
-    }
+@media (max-width: 575.98px) {
+  nav {
+    width: 100vw;
+  }
+  nav form input[type='search'] {
+    width: 10rem;
+  }
+  nav form input[type='search']:focus {
+    width: 20rem;
+  }
+  nav #customElements li:first-child {
+    margin-right: 0;
+  }
 }
 
 /* Small  */
-@media (min-width: 576px) and (max-width: 767.98px) { 
-    
+@media (min-width: 576px) and (max-width: 767.98px) {
 }
 
- /* Medium  */
-@media (min-width: 768px) and (max-width: 991.98px) { 
-    
+/* Medium  */
+@media (min-width: 768px) and (max-width: 991.98px) {
 }
 
 /* Large  */
-@media (min-width: 992px) and (max-width: 1199.98px) { 
-    
+@media (min-width: 992px) and (max-width: 1199.98px) {
 }
 
 /* Extra large  */
-@media (min-width: 1200px) { 
-    
+@media (min-width: 1200px) {
 }
