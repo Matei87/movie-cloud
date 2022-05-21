@@ -314,6 +314,26 @@
   justify-content: space-evenly;
   align-items: center;
 }
+
+#details
+  .details-content
+  .details-content-trailers-content
+  .details-content-review-item {
+  background: rgba(37, 41, 52, 0.8);
+  border: 2px solid #1b242f;
+  padding: 5rem;
+  word-break: break-word;
+  width: 100%;
+}
+
+#details
+  .details-content
+  .details-content-trailers-content
+  .details-content-review-item
+  .details-content-review-item-content {
+  font-size: 1.75rem;
+}
+
 #details
   .details-content
   .details-content-trailers

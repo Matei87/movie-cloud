@@ -11,6 +11,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const DetailsMovie = () => {
   const { id } = useParams();
+
   const [detailsMovie, setDetailsMovie] = useState({
     //movies
     backdrop_path_movie: '',
@@ -203,7 +204,7 @@ const DetailsMovie = () => {
                     <div className='details-content-cast-item' key={content.id}>
                       <Link
                         to={{
-                          pathname: `/details/person/${content.id}`,
+                          pathname: `/person/${content.id}`,
                           state: { id: content.id },
                         }}
                       >
@@ -227,12 +228,12 @@ const DetailsMovie = () => {
             </div>
           ) : null}
 
-          {trailers.length > 0 ? (
-            <div className='details-content-trailers'>
-              <div className='details-content-trailers-header'>
-                <h2 className='details-content-trailers-title'>TRAILERS</h2>
-              </div>
-              <div className='details-content-trailers-content'>
+          <div className='details-content-trailers'>
+            <div className='details-content-trailers-header'>
+              <h2 className='details-content-trailers-title'>TRAILERS</h2>
+            </div>
+            <div className='details-content-trailers-content'>
+              {trailers.length > 0 ? (
                 <Slider {...settingsvideo}>
                   {slicedTrailers.map((content) => (
                     <div
@@ -246,17 +247,23 @@ const DetailsMovie = () => {
                     </div>
                   ))}
                 </Slider>
-              </div>
+              ) : (
+                <div className='details-content-review-item'>
+                  <p className='details-content-review-item-content'>
+                    There are no trailers for this movie.
+                  </p>
+                </div>
+              )}
             </div>
-          ) : null}
+          </div>
 
-          {reviews.length > 0 ? (
-            <div className='details-content-reviews'>
-              <div className='details-content-reviews-header'>
-                <h2 className='details-content-reviews-title'>REVIEWS</h2>
-              </div>
-              <div className='details-content-reviews-content'>
-                {reviews.map((review) => (
+          <div className='details-content-reviews'>
+            <div className='details-content-reviews-header'>
+              <h2 className='details-content-reviews-title'>REVIEWS</h2>
+            </div>
+            <div className='details-content-reviews-content'>
+              {reviews.length > 0 ? (
+                reviews.map((review) => (
                   <div
                     className='details-content-review-item'
                     key={review.author}
@@ -272,23 +279,16 @@ const DetailsMovie = () => {
                     </p>
                     <a href={review.url}>View full review</a>
                   </div>
-                ))}
-              </div>
-            </div>
-          ) : (
-            <div className='details-content-reviews'>
-              <div className='details-content-reviews-header'>
-                <h2 className='details-content-reviews-title'>REVIEWS</h2>
-              </div>
-              <div className='details-content-reviews-content'>
+                ))
+              ) : (
                 <div className='details-content-review-item'>
                   <p className='details-content-review-item-content'>
                     There are no reviews for this movie.
                   </p>
                 </div>
-              </div>
+              )}
             </div>
-          )}
+          </div>
         </div>
       </div>
     );

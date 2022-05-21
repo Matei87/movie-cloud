@@ -136,7 +136,7 @@ const DetailsPerson = () => {
                   >
                     <Link
                       to={{
-                        pathname: `/details/movie/${content.id}`,
+                        pathname: `/movie/${content.id}`,
                         state: { id: content.id },
                       }}
                     >
@@ -187,7 +187,7 @@ const DetailsPerson = () => {
                   >
                     <Link
                       to={{
-                        pathname: `/details/tv/${content.id}`,
+                        pathname: `/tv/${content.id}`,
                         state: { id: content.id },
                       }}
                     >
@@ -228,7 +228,7 @@ const DetailsPerson = () => {
           <div className='person-details-content-reviews-content'>
             <div className='person-details-content-review-item'>
               <p className='person-details-content-review-item-content'>
-                There are no reviews for this person.
+                There are no comments for this person.
               </p>
             </div>
           </div>

@@ -1,15 +1,15 @@
 import React from 'react';
 
 import Header from '../Header/Header';
-import MoviesController from '../MoviesController/MoviesController';
-import MovieTvContainer from '../MovieTvContainer/MovieTvContainer';
+import Controller from '../Controller/Controller';
+import MainContainer from '../MainContainer/MainContainer';
 
 const Homepage = () => {
   return (
     <>
       <Header />
-      <MoviesController />
-      <MovieTvContainer />
+      <Controller />
+      <MainContainer />
     </>
   );
 };

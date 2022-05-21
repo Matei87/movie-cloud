@@ -161,4 +161,7 @@
 
 /* Extra large  */
 @media (min-width: 1200px) {
+  #discover-item .discover-content {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }

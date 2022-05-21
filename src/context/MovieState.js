@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import MovieContext from './MovieContext';
 
-//state of the cotext
+//state of the context
 const MovieState = (props) => {
   const initialstate = {
     multiSearch: [],
-    //all: [],
 
     //movies
     moviesPopular: [],
@@ -44,7 +43,7 @@ const MovieState = (props) => {
       const MULTISEARCH_URL = `https://api.themoviedb.org/3/search/multi?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query=${query}&page=1&include_adult=false`;
       const request = await fetch(MULTISEARCH_URL);
       const response = await request.json();
-      //console.log(response)
+
       setData({ multiSearch: response.results });
     } catch (error) {
       console.log(error);
@@ -62,7 +61,7 @@ const MovieState = (props) => {
       ];
       const response = await Promise.all(request);
       const data = await Promise.all(response.map((res) => res.json()));
-      //console.log(data);
+
       setData({
         moviesUpcoming: data[0].results,
         moviesNowPlaying: data[1].results,
@@ -87,7 +86,7 @@ const MovieState = (props) => {
       ];
       const response = await Promise.all(request);
       const data = await Promise.all(response.map((res) => res.json()));
-      //console.log(data);
+  
       setData({
         tvAiringToday: data[0].results,
         tvPopular: data[1].results,
@@ -101,12 +100,11 @@ const MovieState = (props) => {
     }
   };
 
-  //console.log(data.tvTrendingDay)
   return (
     <MovieContext.Provider
       value={{
         multiSearch: data.multiSearch,
-        //all: data.all,
+        //all
 
         //movies
         moviesPopular: data.moviesPopular,

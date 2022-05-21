@@ -1,9 +1,9 @@
-import React, { useContext, useState, useEffect } from 'react';
-import './MoviesController.css';
+import { useContext, useState, useEffect } from 'react';
+import './Controller.css';
 
 import MovieContext from '../../context/MovieContext';
 
-const MoviesController = () => {
+const Controller = () => {
   const { type, handleMovies, handleTV, loading } = useContext(MovieContext);
   const [data, setData] = useState(MovieContext);
 
@@ -53,4 +53,4 @@ const MoviesController = () => {
   );
 };
 
-export default MoviesController;
+export default Controller;

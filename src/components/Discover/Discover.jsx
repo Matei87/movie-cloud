@@ -105,7 +105,7 @@ const Discover = () => {
             <div className='discover-trends-movies-container-header'>
               <span>MOVIES TRENDING THIS WEEK</span>
               <span>
-                <Link to='/discover/movie/trending-week'>SEE MORE</Link>
+                <Link to='/movie/trending-week'>SEE MORE</Link>
               </span>
             </div>
 
@@ -126,7 +126,7 @@ const Discover = () => {
                     <div className='discover-trends-movies-container-item-content'>
                       <Link
                         to={{
-                          pathname: `/details/movie/${content.id}`,
+                          pathname: `/movie/${content.id}`,
                           state: { id: content.id },
                         }}
                       >
@@ -165,7 +165,7 @@ const Discover = () => {
             <div className='discover-trends-tv-container-header'>
               <span>TV SHOWS TRENDING THIS WEEK</span>
               <span>
-                <Link to='/discover/tv/trending-week'>SEE MORE</Link>
+                <Link to='/tv/trending-week'>SEE MORE</Link>
               </span>
             </div>
 
@@ -186,7 +186,7 @@ const Discover = () => {
                     <div className='discover-trends-tv-container-item-content'>
                       <Link
                         to={{
-                          pathname: `/details/tv/${content.id}`,
+                          pathname: `/tv/${content.id}`,
                           state: { id: content.id },
                         }}
                       >
@@ -222,7 +222,7 @@ const Discover = () => {
       </div>
 
       <div className='discover-all'>
-        <Link to='/discover/movie/upcoming' className='discover-all-item'>
+        <Link to='/movie/upcoming' className='discover-all-item'>
           <img
             src='https://image.tmdb.org/t/p/w400/4gKyQ1McHa8ZKDsYoyKQSevF01J.jpg'
             alt='movie-upcoming'
@@ -232,7 +232,7 @@ const Discover = () => {
             <span>Upcoming Movies</span>
           </div>
         </Link>
-        <Link to='/discover/movie/popular' className='discover-all-item'>
+        <Link to='/movie/popular' className='discover-all-item'>
           <img
             src='https://image.tmdb.org/t/p/w400/zzWGRw277MNoCs3zhyG3YmYQsXv.jpg'
             alt='movie-popular'
@@ -242,7 +242,7 @@ const Discover = () => {
             <span>Popular Movies</span>
           </div>
         </Link>
-        <Link to='/discover/movie/now-playing' className='discover-all-item'>
+        <Link to='/movie/now-playing' className='discover-all-item'>
           <img
             src='https://image.tmdb.org/t/p/w400/5UkzNSOK561c2QRy2Zr4AkADzLT.jpg'
             alt='movie-now-playing'
@@ -252,7 +252,7 @@ const Discover = () => {
             <span>Now Playing Movies</span>
           </div>
         </Link>
-        <Link to='/discover/movie/top-rated' className='discover-all-item'>
+        <Link to='/movie/top-rated' className='discover-all-item'>
           <img
             src='https://image.tmdb.org/t/p/w400/rSPw7tgCH9c6NqICZef4kZjFOQ5.jpg'
             alt='movie-top-rated'
@@ -262,7 +262,7 @@ const Discover = () => {
             <span>Top Rated Movies</span>
           </div>
         </Link>
-        <Link to='/discover/tv/airing-today' className='discover-all-item'>
+        <Link to='/tv/airing-today' className='discover-all-item'>
           <img
             src='https://image.tmdb.org/t/p/w400/adZ9ldSlkGfLfsHNbh37ZThCcgU.jpg'
             alt='tv-airing-today'
@@ -272,7 +272,7 @@ const Discover = () => {
             <span>Airing Today TV Shows</span>
           </div>
         </Link>
-        <Link to='/discover/tv/popular' className='discover-all-item'>
+        <Link to='/tv/popular' className='discover-all-item'>
           <img
             src='https://image.tmdb.org/t/p/w400/hTExot1sfn7dHZjGrk0Aiwpntxt.jpg'
             alt='tv-popular'
@@ -282,7 +282,7 @@ const Discover = () => {
             <span>Popular TV Shows</span>
           </div>
         </Link>
-        <Link to='/discover/tv/on-the-air' className='discover-all-item'>
+        <Link to='/tv/on-the-air' className='discover-all-item'>
           <img
             src='https://image.tmdb.org/t/p/w400/58PON1OrnBiX6CqEHgeWKVwrCn6.jpg'
             alt='tv-on-the-air'
@@ -292,7 +292,7 @@ const Discover = () => {
             <span>On The Air TV Shows</span>
           </div>
         </Link>
-        <Link to='/discover/tv/top-rated' className='discover-all-item'>
+        <Link to='/tv/top-rated' className='discover-all-item'>
           <img
             src='https://image.tmdb.org/t/p/w400/92OPBZpLc82y8CzOtrQ8P9RDvIN.jpg'
             alt='tv-top-rated'
@@ -309,7 +309,7 @@ const Discover = () => {
           <div className='discover-tvtrending-container-header'>
             <span>TV SHOWS TRENDING TODAY</span>
             <span>
-              <Link to='discover/tv/trending-today'>SEE MORE</Link>
+              <Link to='/tv/trending-today'>SEE MORE</Link>
             </span>
           </div>
 
@@ -331,7 +331,7 @@ const Discover = () => {
                     <div className='discover-tvtrending-container-item-content-item'>
                       <Link
                         to={{
-                          pathname: `/details/tv/${content.id}`,
+                          pathname: `/tv/${content.id}`,
                           state: { id: content.id },
                         }}
                       >

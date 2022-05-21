@@ -10,7 +10,7 @@ const useFetcher = (url1, url2 = '&language=en-US&page=1') => {
       const data = await response.json();
       setMovies(data.results);
     })();
-  }, []);
+  }, [url1, url2]);
 
   return { movies };
 };

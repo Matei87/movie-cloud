@@ -11,6 +11,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const DetailsTv = () => {
   const { id } = useParams();
+
   const [detailsTv, setDetailsTv] = useState({
     //tv
     backdrop_path_tv: '',
@@ -103,8 +104,8 @@ const DetailsTv = () => {
 
   let backgroundTv = backdrop_path_tv || poster_path_tv;
 
-  //console.log(reviews);
-  const slicedTrailers = trailers.slice(0, 3);
+  console.log(trailers);
+  // const slicedTrailers = trailers.length && trailers.slice(0, 3);
 
   const settingsvideo = {
     dots: false,
@@ -201,7 +202,7 @@ const DetailsTv = () => {
                     <div className='details-content-cast-item' key={content.id}>
                       <Link
                         to={{
-                          pathname: `/details/person/${content.id}`,
+                          pathname: `/person/${content.id}`,
                           state: { id: content.id },
                         }}
                       >
@@ -225,14 +226,14 @@ const DetailsTv = () => {
             </div>
           ) : null}
 
-          {trailers.length > 0 ? (
+          {trailers.length ? (
             <div className='details-content-trailers'>
               <div className='details-content-trailers-header'>
                 <h2 className='details-content-trailers-title'>TRAILERS</h2>
               </div>
               <div className='details-content-trailers-content'>
                 <Slider {...settingsvideo}>
-                  {slicedTrailers.map((content) => (
+                  {trailers.slice(0, 3).map((content) => (
                     <div
                       className='details-content-trailers-item'
                       key={content.key}
@@ -246,16 +247,32 @@ const DetailsTv = () => {
                 </Slider>
               </div>
             </div>
-          ) : null}
-
-          {reviews.length > 0 ? (
+          ) : (
             <div className='details-content-reviews'>
               <div className='details-content-reviews-header'>
-                <h2 className='details-content-reviews-title'>REVIEWS</h2>
+                <h2 className='details-content-reviews-title'>TRAILERS</h2>
               </div>
               <div className='details-content-reviews-content'>
-                {reviews.map((review) => (
-                  <div className='details-content-review-item' key={review.url}>
+                <div className='details-content-review-item'>
+                  <p className='details-content-review-item-content'>
+                    There are no trailers for this TV Show.
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          <div className='details-content-reviews'>
+            <div className='details-content-reviews-header'>
+              <h2 className='details-content-reviews-title'>REVIEWS</h2>
+            </div>
+            <div className='details-content-reviews-content'>
+              {reviews.length > 0 ? (
+                reviews.map((review) => (
+                  <div
+                    className='details-content-review-item'
+                    key={review.author}
+                  >
                     <h4 className='details-content-review-item-title'>
                       {review.author}
                     </h4>
@@ -267,23 +284,16 @@ const DetailsTv = () => {
                     </p>
                     <a href={review.url}>View full review</a>
                   </div>
-                ))}
-              </div>
-            </div>
-          ) : (
-            <div className='details-content-reviews'>
-              <div className='details-content-reviews-header'>
-                <h2 className='details-content-reviews-title'>REVIEWS</h2>
-              </div>
-              <div className='details-content-reviews-content'>
+                ))
+              ) : (
                 <div className='details-content-review-item'>
                   <p className='details-content-review-item-content'>
                     There are no reviews for this TV Show.
                   </p>
                 </div>
-              </div>
+              )}
             </div>
-          )}
+          </div>
         </div>
       </div>
     );

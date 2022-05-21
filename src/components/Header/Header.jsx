@@ -269,7 +269,7 @@ const Header = () => {
                   <div className='header-item'>
                     <Link
                       to={{
-                        pathname: `/details/movie/${movieId[0]}`,
+                        pathname: `/movie/${movieId[0]}`,
                         state: { id: movieId[0] },
                       }}
                     >
@@ -293,7 +293,7 @@ const Header = () => {
                   <div className='header-item'>
                     <Link
                       to={{
-                        pathname: `/details/movie/${movieId[1]}`,
+                        pathname: `/movie/${movieId[1]}`,
                         state: { id: movieId[1] },
                       }}
                     >
@@ -317,7 +317,7 @@ const Header = () => {
                   <div className='header-item'>
                     <Link
                       to={{
-                        pathname: `/details/movie/${movieId[2]}`,
+                        pathname: `/movie/${movieId[2]}`,
                         state: { id: movieId[2] },
                       }}
                     >
@@ -349,7 +349,7 @@ const Header = () => {
                   <div className='header-item'>
                     <Link
                       to={{
-                        pathname: `/details/tv/${tvId[0]}`,
+                        pathname: `/tv/${tvId[0]}`,
                         state: { id: tvId[0] },
                       }}
                     >
@@ -370,7 +370,7 @@ const Header = () => {
                   <div className='header-item'>
                     <Link
                       to={{
-                        pathname: `/details/tv/${tvId[1]}`,
+                        pathname: `/tv/${tvId[1]}`,
                         state: { id: tvId[1] },
                       }}
                     >
@@ -391,7 +391,7 @@ const Header = () => {
                   <div className='header-item'>
                     <Link
                       to={{
-                        pathname: `/details/tv/${tvId[2]}`,
+                        pathname: `/tv/${tvId[2]}`,
                         state: { id: tvId[2] },
                       }}
                     >

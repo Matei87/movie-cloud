@@ -9,6 +9,8 @@ import defaultmovie from '../../pictures/defaultmovie.png';
 
 const DiscoverItem = ({ title, apiUrl, type }) => {
   const { movies } = useFetcher(apiUrl);
+  const movieOrTv = (prop) =>
+    type === 'movie' ? `/movie/${prop.id}` : `/tv/${prop.id}`;
 
   return (
     <div id='discover-item' className='container'>
@@ -21,7 +23,7 @@ const DiscoverItem = ({ title, apiUrl, type }) => {
           <div className='discover-content-item' key={content.id}>
             <Link
               to={{
-                pathname: `/details/movie/${content.id}`,
+                pathname: `${movieOrTv(content)}`,
                 state: { id: content.id },
               }}
             >

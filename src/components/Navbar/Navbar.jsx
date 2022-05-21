@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import './Navbar.css';
-import { Link, useNavigate } from 'react-router-dom';
+
+import { Link, useNavigate  } from 'react-router-dom';
 import { ImHome } from 'react-icons/im';
 import { IoIosCompass, IoMdSearch } from 'react-icons/io';
 
@@ -10,8 +11,8 @@ import Logo from '../../pictures/moviecloudresized.png';
 const Navbar = () => {
   const { handleSearch } = useContext(MovieContext);
   const [data, setData] = useState('');
-
-  let navigate = useNavigate();
+  
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();

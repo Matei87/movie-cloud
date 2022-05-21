@@ -87,17 +87,13 @@ const App = () => {
         <Suspense fallback={<Loader />}>
           <Routes>
             <Route exact path='/' element={<Homepage />} />
-            <Route exact path='/details/movie/:id' element={<DetailsMovie />} />
-            <Route exact path='/details/tv/:id' element={<DetailsTv />} />
-            <Route
-              exact
-              path='/details/person/:id'
-              element={<DetailsPerson />}
-            />
+            <Route exact path='/movie/:id' element={<DetailsMovie />} />
+            <Route exact path='/tv/:id' element={<DetailsTv />} />
+            <Route exact path='/person/:id' element={<DetailsPerson />} />
             <Route exact path='/discover' element={<Discover />} />
             <Route
               exact
-              path='/discover/movie/upcoming'
+              path='/movie/upcoming'
               element={
                 <DiscoverMovieUpcoming
                   title='UPCOMING MOVIES'
@@ -108,7 +104,7 @@ const App = () => {
             />
             <Route
               exact
-              path='/discover/movie/popular'
+              path='/movie/popular'
               element={
                 <DiscoverMoviePopular
                   title='POPULAR MOVIES'
@@ -119,7 +115,7 @@ const App = () => {
             />
             <Route
               exact
-              path='/discover/movie/now-playing'
+              path='/movie/now-playing'
               element={
                 <DiscoverMovieNowPlaying
                   title='NOW PLAYING MOVIES'
@@ -130,7 +126,7 @@ const App = () => {
             />
             <Route
               exact
-              path='/discover/movie/top-rated'
+              path='/movie/top-rated'
               element={
                 <DiscoverMovieTopRated
                   title='TOP RATED MOVIES'
@@ -141,7 +137,7 @@ const App = () => {
             />
             <Route
               exact
-              path='/discover/movie/trending-week'
+              path='/movie/trending-week'
               element={
                 <DiscoverMovieTrendingWeek
                   title='MOVIES TRENDING THIS WEEK'
@@ -152,7 +148,7 @@ const App = () => {
             />
             <Route
               exact
-              path='/discover/tv/airing-today'
+              path='/tv/airing-today'
               element={
                 <DiscoverTvAiringToday
                   title='AIRING TODAY TV SHOWS'
@@ -163,7 +159,7 @@ const App = () => {
             />
             <Route
               exact
-              path='/discover/tv/popular'
+              path='/tv/popular'
               element={
                 <DiscoverTvPopular
                   title='POPULAR TV SHOWS'
@@ -174,7 +170,7 @@ const App = () => {
             />
             <Route
               exact
-              path='/discover/tv/on-the-air'
+              path='/tv/on-the-air'
               element={
                 <DiscoverTvOnTheAir
                   title='ON THE AIR TV SHOWS'
@@ -185,7 +181,7 @@ const App = () => {
             />
             <Route
               exact
-              path='/discover/tv/top-rated'
+              path='/tv/top-rated'
               element={
                 <DiscoverTvTopRated
                   title='TOP RATED TV SHOWS'
@@ -196,7 +192,7 @@ const App = () => {
             />
             <Route
               exact
-              path='/discover/tv/trending-week'
+              path='/tv/trending-week'
               element={
                 <DiscoverTvTrendingWeek
                   title='TV SHOWS TRENDING THIS WEEK'
@@ -207,7 +203,7 @@ const App = () => {
             />
             <Route
               exact
-              path='/discover/tv/trending-today'
+              path='/tv/trending-today'
               element={
                 <DiscoverTvTrendingDay
                   title='TV SHOWS TRENDING TODAY'
