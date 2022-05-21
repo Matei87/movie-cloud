@@ -26,7 +26,7 @@ const Search = () => {
                   <>
                     <Link
                       to={{
-                        pathname: `/details/movie/${content.id}`,
+                        pathname: `/movie/${content.id}`,
                         state: { id: content.id },
                       }}
                     >
@@ -43,16 +43,14 @@ const Search = () => {
                     </Link>
                     <div className='search-content-item-footer'>
                       <p>
-                        {content.release_date ? (
-                          <span className='HiClock'>
-                            <HiClock /> {content.release_date.slice(0, 4)}
-                          </span>
-                        ) : null}
-                        {content.vote_average !== null ? (
-                          <span className='IoIosStar'>
-                            <IoIosStar /> {content.vote_average || 0}
-                          </span>
-                        ) : null}
+                        <span className='HiClock'>
+                          <HiClock />
+                          {content.release_date &&
+                            content.release_date.slice(0, 4)}
+                        </span>
+                        <span className='IoIosStar'>
+                          <IoIosStar /> {content.vote_average || 0}
+                        </span>
                       </p>
                     </div>
                   </>
@@ -60,7 +58,7 @@ const Search = () => {
                   <>
                     <Link
                       to={{
-                        pathname: `/details/tv/${content.id}`,
+                        pathname: `/tv/${content.id}`,
                         state: { id: content.id },
                       }}
                     >
@@ -77,16 +75,14 @@ const Search = () => {
                     </Link>
                     <div className='search-content-item-footer'>
                       <p>
-                        {content.first_air_date ? (
-                          <span className='HiClock'>
-                            <HiClock /> {content.first_air_date.slice(0, 4)}
-                          </span>
-                        ) : null}
-                        {content.vote_average !== null ? (
-                          <span className='IoIosStar'>
-                            <IoIosStar /> {content.vote_average || 0}
-                          </span>
-                        ) : null}
+                        <span className='HiClock'>
+                          <HiClock />
+                          {content.first_air_date &&
+                            content.first_air_date.slice(0, 4)}
+                        </span>
+                        <span className='IoIosStar'>
+                          <IoIosStar /> {content.vote_average || 0}
+                        </span>
                       </p>
                     </div>
                   </>
@@ -94,7 +90,7 @@ const Search = () => {
                   <div className='details-content-cast-item' key={content.id}>
                     <Link
                       to={{
-                        pathname: `/details/person/${content.id}`,
+                        pathname: `/person/${content.id}`,
                         state: { id: content.id },
                       }}
                     >
