@@ -147,7 +147,8 @@ const Discover = () => {
                           ) : null}
                           {content.vote_average ? (
                             <span className='IoIosStar'>
-                              <IoIosStar /> {content.vote_average || 0}
+                              <IoIosStar />
+                              {content.vote_average.toFixed(1) || 0}
                             </span>
                           ) : null}
                         </p>
@@ -207,7 +208,8 @@ const Discover = () => {
                           ) : null}
                           {content.vote_average ? (
                             <span className='IoIosStar'>
-                              <IoIosStar /> {content.vote_average || 0}
+                              <IoIosStar />{' '}
+                              {content.vote_average.toFixed(1) || 0}
                             </span>
                           ) : null}
                         </p>
@@ -349,7 +351,8 @@ const Discover = () => {
                           ) : null}
                           {content.vote_average ? (
                             <span className='IoIosStar'>
-                              <IoIosStar /> {content.vote_average || 0}
+                              <IoIosStar />
+                              {content.vote_average.toFixed(1) || 0}
                             </span>
                           ) : null}
                         </p>

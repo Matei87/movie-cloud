@@ -223,6 +223,7 @@ const Header = () => {
     let background;
     if (type === 'movie') {
       background = moviesUpcoming.slice(0, 3) || [];
+
       if (background && moviesGenreList.genres) {
         background.forEach((item) => {
           item.genre_ids = moviesGenreList.genres
@@ -231,7 +232,7 @@ const Header = () => {
           movieTitle.push(item.title);
           movieYear.push(item.release_date.slice(0, 4));
           moviePicture.push(item.backdrop_path || item.poster_path);
-          movieRating.push(item.vote_average);
+          movieRating.push(item.vote_average.toFixed(1));
           movieId.push(item.id);
         });
       }
@@ -248,7 +249,7 @@ const Header = () => {
           tvTitle.push(item.name);
           tvYear.push(item.first_air_date.slice(0, 4));
           tvPicture.push(item.backdrop_path || item.poster_path);
-          tvRating.push(item.vote_average);
+          tvRating.push(item.vote_average.toFixed(1));
           tvId.push(item.id);
         });
       }

@@ -10,8 +10,8 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const MainPageContainers = ({ title, movies, type }) => {
   const movieOrTv = (prop) =>
-  type === 'movie' ? `/movie/${prop.id}` : `/tv/${prop.id}`;
-  
+    type === 'movie' ? `/movie/${prop.id}` : `/tv/${prop.id}`;
+
   return (
     <div className='main_container'>
       <div className='container-header'>
@@ -44,7 +44,7 @@ const MainPageContainers = ({ title, movies, type }) => {
                       : 'N/A'}
                   </span>
                   <span>
-                    <IoIosStar /> {content.vote_average || 0}
+                    <IoIosStar /> {content.vote_average.toFixed(1) || 0}
                   </span>
                 </p>
               </div>

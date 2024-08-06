@@ -50,7 +50,7 @@ const DiscoverItem = ({ title, apiUrl, type }) => {
                     : 'N/A'}
                 </span>
                 <span className='IoIosStar'>
-                  <IoIosStar /> {content.vote_average || 0}
+                  <IoIosStar /> {content.vote_average.toFixed(1) || 0}
                 </span>
               </p>
             </div>

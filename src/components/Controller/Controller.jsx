@@ -5,7 +5,7 @@ import MovieContext from '../../context/MovieContext';
 
 const Controller = () => {
   const { type, handleMovies, handleTV, loading } = useContext(MovieContext);
-  const [data, setData] = useState(MovieContext);
+  const [, setData] = useState(MovieContext);
 
   useEffect(() => {
     if (!type) {

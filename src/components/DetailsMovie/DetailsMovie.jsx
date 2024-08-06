@@ -174,7 +174,7 @@ const DetailsMovie = () => {
               {original_language_movie ? (
                 <>{original_language_movie.toUpperCase()} | </>
               ) : null}
-              {vote_average_movie ? vote_average_movie : null}{' '}
+              {vote_average_movie ? vote_average_movie.toFixed(1) : null}{' '}
               {vote_count_movie ? <>{`(${vote_count_movie})`}</> : null}
             </span>
             <span className='details-header-details-tagline'>

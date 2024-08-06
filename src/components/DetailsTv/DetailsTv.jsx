@@ -104,7 +104,6 @@ const DetailsTv = () => {
 
   let backgroundTv = backdrop_path_tv || poster_path_tv;
 
-  console.log(trailers);
   // const slicedTrailers = trailers.length && trailers.slice(0, 3);
 
   const settingsvideo = {
@@ -177,7 +176,7 @@ const DetailsTv = () => {
               {original_language_tv ? (
                 <>{`${original_language_tv.toUpperCase()} | `}</>
               ) : null}
-              {vote_average_tv ? vote_average_tv : null}{' '}
+              {vote_average_tv ? vote_average_tv.toFixed(1) : null}{' '}
               {vote_count_tv ? <>{`(${vote_count_tv})`}</> : null}
             </span>
           </div>

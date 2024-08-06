@@ -49,7 +49,7 @@ const Search = () => {
                             content.release_date.slice(0, 4)}
                         </span>
                         <span className='IoIosStar'>
-                          <IoIosStar /> {content.vote_average || 0}
+                          <IoIosStar /> {content.vote_average.toFixed(1) || 0}
                         </span>
                       </p>
                     </div>
@@ -81,7 +81,7 @@ const Search = () => {
                             content.first_air_date.slice(0, 4)}
                         </span>
                         <span className='IoIosStar'>
-                          <IoIosStar /> {content.vote_average || 0}
+                          <IoIosStar /> {content.vote_average.toFixed(1) || 0}
                         </span>
                       </p>
                     </div>
